@@ -1,0 +1,6 @@
+﻿INSERT INTO lkpItemInvStatuses (StatusName, CreatedBy)
+VALUES ('Pending QC', 0)
+INSERT INTO lkpItemInvStatuses (StatusName, CreatedBy)
+VALUES ('Accepted', 0)
+INSERT INTO lkpItemInvStatuses (StatusName, CreatedBy)
+VALUES ('Rejected', 0)

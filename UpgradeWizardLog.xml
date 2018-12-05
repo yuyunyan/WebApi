@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.API\Sourceportal.API.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\sourceportal.api\Sourceportal.API\packages.config" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\inspection.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\inspection.html" />
+  <event action="Analyze" type="Success" name="inspection.html" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\inspection.html" />
+  <event action="Analyze" type="Warning" name="telerikReportViewer-12.0.18.416.min.js" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\js\telerikReportViewer-12.0.18.416.min.js">The contents of the file have been changed.</event>
+  <event action="Analyze" type="Warning" name="telerikReportViewer.kendo-12.0.18.416.min.js" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\js\telerikReportViewer.kendo-12.0.18.416.min.js">The contents of the file have been changed.</event>
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\purchaseorder.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\purchaseorder.html" />
+  <event action="Analyze" type="Success" name="purchaseorder.html" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\purchaseorder.html" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\quote.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\quote.html" />
+  <event action="Analyze" type="Success" name="quote.html" path="C:\Projects\sourceportal.api\Sourceportal.API\ReportViewer\quote.html" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Web.Release.config" path="C:\Projects\sourceportal.api\Sourceportal.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Sourceportal.API" path="C:\Projects\sourceportal.api\Sourceportal.API\Sourceportal.API.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.DB\Sourceportal.DB.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\sourceportal.api\Sourceportal.DB\packages.config" />
+  <event action="Analyze" type="Success" name="Sourceportal.DB" path="C:\Projects\sourceportal.api\Sourceportal.DB\Sourceportal.DB.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.Domain\Sourceportal.Domain.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\sourceportal.api\Sourceportal.Domain\packages.config" />
+  <event action="Analyze" type="Success" name="Sourceportal.Domain" path="C:\Projects\sourceportal.api\Sourceportal.Domain\Sourceportal.Domain.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\SourcePortal.Services\SourcePortal.Services.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="C:\Projects\sourceportal.api\SourcePortal.Services\app.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\sourceportal.api\SourcePortal.Services\packages.config" />
+  <event action="Analyze" type="Success" name="SourcePortal.Services" path="C:\Projects\sourceportal.api\SourcePortal.Services\SourcePortal.Services.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\Sourceportal.ServiceTests.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\app.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\packages.config" />
+  <event action="Analyze" type="Success" name="Sourceportal.ServiceTests" path="C:\Projects\sourceportal.api\Sourceportal.ServiceTests\Sourceportal.ServiceTests.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\Sourceportal.Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\packages.config" />
+  <event action="Analyze" type="Success" name="Sourceportal.Utilities" path="C:\Projects\sourceportal.api\Sourceportal.Utilities\Sourceportal.Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.Reports\Sourceportal.Reports.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="C:\Projects\sourceportal.api\Sourceportal.Reports\app.config" />
+  <event action="Analyze" type="Success" name="Inspection.resx" path="C:\Projects\sourceportal.api\Sourceportal.Reports\Inspection.resx" />
+  <event action="Analyze" type="Success" name="Telerik.ReportViewer.Wpf.TextResources.resx" path="C:\Projects\sourceportal.api\Sourceportal.Reports\lib\Telerik.ReportViewer.Wpf.TextResources.resx" />
+  <event action="Analyze" type="Success" name="PurchaseOrder.resx" path="C:\Projects\sourceportal.api\Sourceportal.Reports\PurchaseOrder.resx" />
+  <event action="Analyze" type="Success" name="QuoteDetails.resx" path="C:\Projects\sourceportal.api\Sourceportal.Reports\QuoteDetails.resx" />
+  <event action="Analyze" type="Success" name="Sourceportal.Reports" path="C:\Projects\sourceportal.api\Sourceportal.Reports\Sourceportal.Reports.csproj" />
+  <event action="Analyze" type="Success" name="Sourceportal.API" path="C:\Projects\sourceportal.api\Sourceportal.API.sln" />
+</log>

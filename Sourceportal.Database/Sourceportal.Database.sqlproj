@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Sourceportal.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b6d82dff-fea6-4bda-92b7-b17664c0bd60}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Sourceportal.Database</RootNamespace>
+    <AssemblyName>Sourceportal.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="StoredProcs" />
+    <Folder Include="Functions" />
+    <Folder Include="Tables" />
+    <Folder Include="InsertScripts" />
+    <Folder Include="Schemas" />
+    <Folder Include="Views" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Users.sql" />
+    <Build Include="Tables\UserGroups.sql" />
+    <Build Include="Tables\Roles.sql" />
+    <Build Include="Tables\Organizations.sql" />
+    <Build Include="Tables\mapUserRoles.sql" />
+    <Build Include="Tables\mapUserRelationships.sql" />
+    <Build Include="Tables\AppTables.sql" />
+    <Build Include="Tables\lkpFields.sql" />
+    <Build Include="Tables\lkpNavigation.sql" />
+    <Build Include="Tables\lkpObjectTypes.sql" />
+    <Build Include="Tables\lkpPermissions.sql" />
+    <Build Include="Tables\lkpUserRelationshipTypes.sql" />
+    <Build Include="Tables\mapOwnership.sql" />
+    <Build Include="Tables\mapRolePermissions.sql" />
+    <Build Include="Tables\mapUserGroupMembers.sql" />
+    <Build Include="StoredProcs\uspFieldsByRoleGet.sql" />
+    <Build Include="StoredProcs\uspFieldsGet.sql" />
+    <Build Include="StoredProcs\uspNavigationByRoleGet.sql" />
+    <Build Include="StoredProcs\uspNavigationGet.sql" />
+    <Build Include="StoredProcs\uspPermissionsByRoleGet.sql" />
+    <Build Include="StoredProcs\uspPermissionsGet.sql" />
+    <Build Include="StoredProcs\uspRoleSet.sql" />
+    <Build Include="StoredProcs\uspRolesGet.sql" />
+    <Build Include="StoredProcs\uspUserGet.sql" />
+    <Build Include="StoredProcs\uspUserListGet.sql" />
+    <Build Include="StoredProcs\uspUserLogin.sql" />
+    <Build Include="StoredProcs\uspUserRolesGet.sql" />
+    <Build Include="Functions\fnUserObjectTypeID.sql" />
+    <Build Include="Functions\fnAccountObjectTypeID.sql" />
+    <Build Include="Functions\fnContactObjectTypeID.sql" />
+    <Build Include="Functions\fnNavigationObjectTypeID.sql" />
+    <Build Include="Functions\fnSalesOrderObjectTypeID.sql" />
+    <Build Include="Functions\fnUserGroupObjectTypeID.sql" />
+    <Build Include="Tables\Locations.sql" />
+    <Build Include="Tables\lkpLocationTypes.sql" />
+    <Build Include="Tables\mapAccountProjects.sql" />
+    <Build Include="Tables\Projects.sql" />
+    <Build Include="Tables\lkpCompanyTypes.sql" />
+    <Build Include="Tables\Accounts.sql" />
+    <Build Include="Tables\Contacts.sql" />
+    <Build Include="Tables\lkpAccountTypes.sql" />
+    <Build Include="Tables\lkpAccountStatuses.sql" />
+    <Build Include="Functions\fnCanViewLinkPermissionTypeID_1.sql" />
+    <Build Include="Functions\fnCanEditAccountFieldPermissionTypeID_1.sql" />
+    <Build Include="StoredProcs\uspContactsGet.sql" />
+    <Build Include="StoredProcs\uspOwnershipGet.sql" />
+    <Build Include="StoredProcs\uspLocationsGet.sql" />
+    <Build Include="Functions\fnGetContactOwners.sql" />
+    <Build Include="Functions\fnGetAccountType.sql" />
+    <Build Include="StoredProcs\uspContactSet.sql" />
+    <Build Include="StoredProcs\uspOwnershipSet.sql" />
+    <Build Include="StoredProcs\uspLocationSet.sql" />
+    <Build Include="Tables\Countries.sql" />
+    <Build Include="Tables\States.sql" />
+    <Build Include="StoredProcs\uspCountriesGet.sql" />
+    <Build Include="StoredProcs\uspStatesGet.sql" />
+    <Build Include="StoredProcs\uspAccountsGet.sql" />
+    <Build Include="StoredProcs\uspAccountSet.sql" />
+    <Build Include="Tables\lkpContactMethod.sql" />
+    <Build Include="Tables\lkpContactStatus.sql" />
+    <Build Include="Tables\Quotes.sql" />
+    <Build Include="Tables\QuoteLines.sql" />
+    <Build Include="Tables\QuoteExtras.sql" />
+    <Build Include="Tables\lkpStatuses.sql" />
+    <Build Include="Tables\Sources.sql" />
+    <Build Include="Tables\lkpSourceTypes.sql" />
+    <Build Include="Tables\mapSourcesJoin.sql" />
+    <Build Include="Tables\Items.sql" />
+    <Build Include="Tables\Manufacturers.sql" />
+    <Build Include="Tables\lkpItemCommodities.sql" />
+    <Build Include="Tables\lkpItemGroups.sql" />
+    <Build Include="Tables\lkpItemStatuses.sql" />
+    <Build Include="Tables\ItemExtras.sql" />
+    <Build Include="StoredProcs\uspStatusesGet.sql" />
+    <Build Include="StoredProcs\uspQuoteSet.sql" />
+    <Build Include="StoredProcs\uspQuoteGet.sql" />
+    <Build Include="Functions\fnGetObjectOwners.sql" />
+    <Build Include="StoredProcs\uspAccountsByTypeGet.sql" />
+    <Build Include="StoredProcs\uspContactsByAccountGet.sql" />
+    <Build Include="StoredProcs\uspLocationsByAccountGet.sql" />
+    <Build Include="StoredProcs\uspQuoteLineSet.sql" />
+    <Build Include="Functions\fnStripNonAlphaNumeric.sql" />
+    <Build Include="Tables\lkpPackaging.sql" />
+    <Build Include="StoredProcs\uspQuotesListGet.sql" />
+    <Build Include="Schemas\codes.sql" />
+    <Build Include="Tables\lkpIncoterms.sql" />
+    <Build Include="StoredProcs\uspItemsGet.sql" />
+    <Build Include="StoredProcs\uspItemGroupsGet.sql" />
+    <Build Include="StoredProcs\uspItemCommoditiesGet.sql" />
+    <Build Include="StoredProcs\uspManufacturersGet.sql" />
+    <Build Include="StoredProcs\uspItemStatusesGet.sql" />
+    <Build Include="StoredProcs\uspItemSet.sql" />
+    <Build Include="StoredProcs\uspAccountStatusesGet.sql" />
+    <Build Include="StoredProcs\uspSourcesGet.sql" />
+    <Build Include="StoredProcs\uspSourceSet.sql" />
+    <Build Include="Tables\lkpCurrencies.sql" />
+    <Build Include="StoredProcs\uspSourceJoinSet.sql" />
+    <Build Include="Functions\fnGetSourceActivity.sql" />
+    <Build Include="StoredProcs\uspQuoteExtraSet.sql" />
+    <Build Include="StoredProcs\uspPackagingGet.sql" />
+    <Build Include="StoredProcs\uspItemExtrasGet.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesDelete.sql" />
+    <Build Include="Tables\SalesOrders.sql" />
+    <Build Include="Tables\SalesOrderLines.sql" />
+    <Build Include="Tables\SalesOrderExtras.sql" />
+    <Build Include="StoredProcs\uspQuoteToSO.sql" />
+    <Build Include="Views\vwQuotes.sql" />
+    <Build Include="Views\vwQuoteLines.sql" />
+    <Build Include="Views\vwQuoteExtras.sql" />
+    <Build Include="Tables\lkpConfigVariables.sql" />
+    <Build Include="StoredProcs\uspSalesOrderSet.sql" />
+    <Build Include="Views\vwSalesOrders.sql" />
+    <Build Include="StoredProcs\uspSalesOrderGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrdersListGet.sql" />
+    <Build Include="Tables\lkpFreightPaymentMethods.sql" />
+    <Build Include="Views\vwSalesOrderLines.sql" />
+    <Build Include="Views\vwSalesOrderExtras.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLineSet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLinesGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderExtrasGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderExtraSet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLinesDelete.sql" />
+    <Build Include="StoredProcs\uspSourcingStatusesGet.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesForSourcingGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderExtrasDelete.sql" />
+    <Build Include="StoredProcs\uspItemListGet.sql" />
+    <Build Include="StoredProcs\uspSourceTypesGet.sql" />
+    <Build Include="Tables\PurchaseOrders.sql" />
+    <Build Include="Tables\PurchaseOrderLines.sql" />
+    <Build Include="Tables\PurchaseOrderExtras.sql" />
+    <Build Include="Views\vwPurchaseOrders.sql" />
+    <Build Include="Views\vwPurchaseOrderLines.sql" />
+    <Build Include="Views\vwPurchaseOrderExtras.sql" />
+    <Build Include="Tables\ItemStock.sql" />
+    <Build Include="Tables\Warehouses.sql" />
+    <Build Include="Tables\mapSOPOAllocation.sql" />
+    <Build Include="Tables\mapSOInvFulfillment.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrdersListGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderSet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderExtrasGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderExtraSet.sql" />
+    <Build Include="Tables\lkpItemInvStatuses.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderExtrasDelete.sql" />
+    <Build Include="StoredProcs\uspSOLinesFulfillmentGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderLinesDelete.sql" />
+    <Build Include="Tables\lkpPaymentTerms.sql" />
+    <Build Include="StoredProcs\uspAvailableInvPOGet.sql" />
+    <Build Include="Functions\fnGetSOPOAllocations.sql" />
+    <Build Include="Functions\fnGetInvFulfillments.sql" />
+    <Build Include="StoredProcs\uspPaymentTermsGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderAllocationSet.sql" />
+    <Build Include="StoredProcs\uspLocationsNonBillingGet.sql" />
+    <Build Include="StoredProcs\uspCurrenciesGet.sql" />
+    <Build Include="StoredProcs\uspQCChecklistsGet.sql" />
+    <Build Include="Tables\Documents.sql" />
+    <Build Include="StoredProcs\uspDocumentSet.sql" />
+    <Build Include="Tables\lkpQCAnswerTypes.sql" />
+    <Build Include="Tables\Comments.sql" />
+    <Build Include="Tables\lkpCommentTypes.sql" />
+    <Build Include="StoredProcs\uspCommentsGet.sql" />
+    <Build Include="StoredProcs\uspCommentSet.sql" />
+    <Build Include="Functions\fnGetCommentsCount.sql" />
+    <Build Include="StoredProcs\uspGetSourceCommentUID.sql" />
+    <Build Include="Tables\QCAnswers.sql" />
+    <Build Include="Tables\QCChecklists.sql" />
+    <Build Include="Tables\QCInspections.sql" />
+    <Build Include="Tables\QCQuestions.sql" />
+    <Build Include="Tables\mapQCChecklistJoins.sql" />
+    <Build Include="Views\vwQCQuestions.sql" />
+    <Build Include="StoredProcs\uspDocumentDelete.sql" />
+    <Build Include="Views\vwItemInventoryWithFulfillment.sql" />
+    <Build Include="Functions\fnCanViewAccountFieldPermissionTypeID.sql" />
+    <Build Include="Functions\fnCanViewLinkPermissionTypeID.sql" />
+    <None Include="InsertScripts\lkpQCAnswerTypesInsert.sql" />
+    <None Include="InsertScripts\QCChecklistsInsert.sql" />
+    <None Include="InsertScripts\QCQuestionsInsert.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderLinesGet.sql" />
+    <Build Include="StoredProcs\uspUserRoleSet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionCheckListsGet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionCreate.sql" />
+    <Build Include="Views\vwQCCheckLists.sql" />
+    <Build Include="StoredProcs\uspQCChecklistAssociationsGet.sql" />
+    <Build Include="StoredProcs\uspQCQuestionsGet.sql" />
+    <Build Include="StoredProcs\uspInspectionAnswerSet.sql" />
+    <Build Include="StoredProcs\uspQCConclusionGet.sql" />
+    <Build Include="StoredProcs\uspQCChecklistAssociationsDelete.sql" />
+    <Build Include="StoredProcs\uspQCChecklistAssociationsSet.sql" />
+    <Build Include="StoredProcs\uspQCConclusionSet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionListGet.sql" />
+    <Build Include="Tables\lkpQCInspectionStatuses.sql" />
+    <Build Include="Functions\fnGetCustomersForInventory.sql" />
+    <Build Include="Functions\fnGetEarliestShipDateOfSOLine.sql" />
+    <Build Include="StoredProcs\uspQCAnswerTypesGet.sql" />
+    <Build Include="Tables\ItemLists.sql" />
+    <Build Include="Tables\ItemListLines.sql" />
+    <Build Include="Tables\lkpXlsDataMap.sql" />
+    <Build Include="StoredProcs\uspXlsAccountMapSet.sql" />
+    <Build Include="Tables\mapXlsAccount.sql" />
+    <Build Include="Tables\Searches.sql" />
+    <Build Include="Tables\SearchDetails.sql" />
+    <Build Include="Tables\SearchResults.sql" />
+    <Build Include="StoredProcs\uspXlsDataMapGet.sql" />
+    <Build Include="StoredProcs\uspXlsAccountGet.sql" />
+    <Build Include="StoredProcs\uspVendorRFQGet.sql" />
+    <Build Include="Tables\VendorRFQs.sql" />
+    <Build Include="Tables\VendorRFQLines.sql" />
+    <Build Include="StoredProcs\uspVendorRFQLinesGet.sql" />
+    <Build Include="StoredProcs\uspVendorRfqLineSet.sql" />
+    <Build Include="StoredProcs\uspVendorRfqLineResponsesGet.sql" />
+    <Build Include="StoredProcs\uspVendorRfqLineResponseSet.sql" />
+    <Build Include="StoredProcs\uspVendorRfqSet.sql" />
+    <Build Include="Functions\fnRfqObjectTypeID.sql" />
+    <Build Include="Functions\fnGetRfqOwners.sql" />
+    <Build Include="StoredProcs\uspVendorRfqLinesDelete.sql" />
+    <Build Include="StoredProcs\uspVendorRfqLineResponsesDelete.sql" />
+    <Build Include="StoredProcs\uspBOMListGet.sql" />
+    <Build Include="StoredProcs\uspBOMResultsSummaryGet.sql" />
+    <Build Include="StoredProcs\uspBomCacheUpdate.sql" />
+    <Build Include="StoredProcs\uspBOMCustomerQuotesLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMCustomerRFQsLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMInventoryLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMOutsideOffersLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMProcessMatch.sql" />
+    <Build Include="StoredProcs\uspBOMPurchaseOrderLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMQuoteLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMRecordLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMSalesOrderLinesGet.sql" />
+    <Build Include="StoredProcs\uspBOMVendorQuotesLinesGet.sql" />
+    <Build Include="StoredProcs\uspItemListIns.sql" />
+    <Build Include="Tables\BOMCacheDataPre.sql" />
+    <Build Include="Tables\BOMCachedResults.sql" />
+    <Build Include="Tables\logBOMCacheDataPre.sql" />
+    <Build Include="Tables\logBOMCacheVersion.sql" />
+    <Build Include="Tables\ErrorLog.sql" />
+    <Build Include="Tables\Applications.sql" />
+    <Build Include="StoredProcs\uspErrorLogSet.sql" />
+    <Build Include="Tables\mapAccountObjectTypes.sql" />
+    <Build Include="Functions\fnGetAccountTypes.sql" />
+    <Build Include="Tables\UserGridSettings.sql" />
+    <Build Include="StoredProcs\uspGridSettingsSet.sql" />
+    <Build Include="Tables\mapOrgObjectTypes.sql" />
+    <Build Include="StoredProcs\uspGridSettingsGet.sql" />
+    <Build Include="StoredProcs\uspGetMfrItem.sql" />
+    <Build Include="StoredProcs\uspContactsByAccountIdGet.sql" />
+    <Build Include="StoredProcs\uspObjectTypeSecurityListGet.sql" />
+    <Build Include="StoredProcs\uspSecurityTypeListGet.sql" />
+    <Build Include="StoredProcs\uspFilterObjectListGet.sql" />
+    <Build Include="Tables\mapRoleFieldPermissions.sql" />
+    <Build Include="Tables\mapRoleNavPermissions.sql" />
+    <Build Include="StoredProcs\uspFieldPermissionsGet.sql" />
+    <Build Include="StoredProcs\uspUserObjectSecurityGet.sql" />
+    <Build Include="StoredProcs\uspUserGeneralSecurityGet.sql" />
+    <Build Include="StoredProcs\uspNavigationsGet.sql" />
+    <Build Include="StoredProcs\uspQCChecklistQuestionDeleteSet.sql" />
+    <Build Include="StoredProcs\uspIncotermsGet.sql" />
+    <Build Include="StoredProcs\uspOrganizationsGet.sql" />
+    <Build Include="StoredProcs\uspShippingMethodsGet.sql" />
+    <Build Include="StoredProcs\uspShipToLocationsGet.sql" />
+    <Build Include="StoredProcs\uspNavigationRolesForUserGet.sql" />
+    <Build Include="StoredProcs\uspAccountSearchByNameNumGet.sql" />
+    <Build Include="StoredProcs\uspItemListSourceIns.sql" />
+    <Build Include="StoredProcs\uspObjectTypeOptionsForRoleGet.sql" />
+    <Build Include="StoredProcs\uspRolePermissionsSet.sql" />
+    <Build Include="StoredProcs\uspRoleFieldsSet.sql" />
+    <Build Include="StoredProcs\uspRoleNavLinksSet.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesRouteTo.sql" />
+    <Build Include="Tables\lkpDocumentTypes.sql" />
+    <Build Include="Functions\fnGetDocumentTypeID.sql" />
+    <Build Include="Tables\ContactJobFunctions.sql" />
+    <Build Include="StoredProcs\uspContactJobFunctionsGet.sql" />
+    <Build Include="Tables\mapContactFocuses.sql" />
+    <Build Include="Tables\mapContactProjects.sql" />
+    <Build Include="StoredProcs\uspContactProjectsGet.sql" />
+    <Build Include="StoredProcs\uspContactProjectsSet.sql" />
+    <Build Include="StoredProcs\uspContactFocusesGet.sql" />
+    <Build Include="StoredProcs\uspContactFocusesSet.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchiesGet.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchySet.sql" />
+    <Build Include="StoredProcs\uspQuoteAccountGet.sql" />
+    <Build Include="StoredProcs\uspQuoteReportDetailsGet.sql" />
+    <Build Include="StoredProcs\uspItemCreateFromIHS.sql" />
+    <Build Include="StoredProcs\uspAccountFocusDelete.sql" />
+    <Build Include="StoredProcs\uspAccountFocusesGet.sql" />
+    <Build Include="StoredProcs\uspAccountFocusObjectTypesGet.sql" />
+    <Build Include="StoredProcs\uspAccountFocusSet.sql" />
+    <Build Include="StoredProcs\uspAccountFocusTypesGet.sql" />
+    <Build Include="Functions\fnIsValidBitWiseInt.sql" />
+    <Build Include="StoredProcs\uspAccountTypesGet.sql" />
+    <None Include="StoredProcs\uspConfigVariablesGet.sql" />
+    <Build Include="Tables\UserAccountGroups.sql" />
+    <Build Include="Tables\mapUserAccountGroupAccounts.sql" />
+    <Build Include="StoredProcs\uspUserAccountGroupListGet.sql" />
+    <Build Include="StoredProcs\uspUserAccountGroupDelete.sql" />
+    <Build Include="StoredProcs\uspAccountGroupDetailGet.sql" />
+    <Build Include="StoredProcs\uspAccountGroupSet.sql" />
+    <Build Include="StoredProcs\uspSuppliersAccountGroupMatch.sql" />
+    <Build Include="Tables\lkpStateEngineConditions.sql" />
+    <Build Include="StoredProcs\uspQuoteReportLocationGet.sql" />
+    <Build Include="Tables\StateEngineRules.sql" />
+    <Build Include="Tables\lkpStateEngineTriggers.sql" />
+    <Build Include="Tables\StateEngineRuleGroups.sql" />
+    <Build Include="StoredProcs\uspQuotePriceSumGet.sql" />
+    <Build Include="StoredProcs\uspContactsGetByAccountType.sql" />
+    <Build Include="StoredProcs\uspAccountsGetByType.sql" />
+    <Build Include="Tables\mapStateEngineRuleConditions.sql" />
+    <Build Include="Tables\lkpStateEngineActions.sql" />
+    <Build Include="Tables\mapStateEngineRuleActions.sql" />
+    <Build Include="Tables\lkpStateEngineDynamicValues.sql" />
+    <Build Include="Tables\mapStateEngineDynamicValues.sql" />
+    <Build Include="StoredProcs\uspStateEngineConditionsGet.sql" />
+    <Build Include="StoredProcs\uspStateEngineRuleGroupsGet.sql" />
+    <Build Include="StoredProcs\uspStateEngineTriggersGet.sql" />
+    <Build Include="Functions\fnGetAccountStatusForSap.sql" />
+    <Build Include="StoredProcs\uspAccountStatusGet.sql" />
+    <Build Include="StoredProcs\uspAccountSapDataSet.sql" />
+    <Build Include="StoredProcs\uspContactSapDataSet.sql" />
+    <Build Include="StoredProcs\uspLocationSapDataSet.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchySapDataSet.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchyChildSapDataSet.sql" />
+    <Build Include="StoredProcs\uspQuoteLinePrintSet.sql" />
+    <Build Include="StoredProcs\uspStateEngineRulesGet.sql" />
+    <Build Include="StoredProcs\uspStateEngineRuleGroupSet.sql" />
+    <Build Include="Tables\lkpPackageConditions.sql" />
+    <Build Include="Tables\lkpAccountHistory.sql" />
+    <Build Include="Tables\mapUserBuyers.sql" />
+    <Build Include="Tables\mapBuyerSpecialties.sql" />
+    <Build Include="Tables\mapUserSellers.sql" />
+    <Build Include="StoredProcs\uspBuyersGet.sql" />
+    <Build Include="StoredProcs\uspSellersGet.sql" />
+    <Build Include="Tables\mapBuyerQuoteRoutes.sql" />
+    <Build Include="Tables\lkpRouteStatuses.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesSpecificRoute.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesAutoRoute.sql" />
+    <Build Include="StoredProcs\uspStateEngineRuleDetailSet.sql" />
+    <Build Include="Functions\fnFormatWithCommas.sql" />
+    <Build Include="StoredProcs\uspStateEngineRuleActionsGet.sql" />
+    <Build Include="StoredProcs\uspStateEngineActionListGet.sql" />
+    <Build Include="StoredProcs\mapStateEngineRuleActionsSet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderSapDataSet.sql" />
+    <Build Include="StoredProcs\uspItemSapDataSet.sql" />
+    <Build Include="Tables\lkpQuoteTypes.sql" />
+    <Build Include="StoredProcs\uspItemInventorySet.sql" />
+    <Build Include="StoredProcs\uspRouteStatusesForUserGet.sql" />
+    <Build Include="StoredProcs\uspMapBuyerRoutesSet.sql" />
+    <Build Include="StoredProcs\uspQuoteLineRouteBuyersGet.sql" />
+    <Build Include="StoredProcs\uspStatusByExternalGet.sql" />
+    <Build Include="Tables\AccountHierarchies.sql" />
+    <Build Include="Tables\lkpAccountFocusObjectTypes.sql" />
+    <Build Include="Tables\lkpDeliveryRules.sql" />
+    <Build Include="StoredProcs\uspDeliveryRulesGet.sql" />
+    <Build Include="Tables\lkpAccountFocusTypes.sql" />
+    <Build Include="Tables\lkpObjectTypeSecurity.sql" />
+    <Build Include="Tables\lkpRegions.sql" />
+    <Build Include="Tables\lkpUserRoleFilterTypes.sql" />
+    <Build Include="Tables\mapAccountFocuses.sql" />
+    <Build Include="Tables\mapAccountPartNumbers.sql" />
+    <Build Include="Tables\mapAccountTypes.sql" />
+    <Build Include="Views\vwUserAccess.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchyParentsGet.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchyChildrenGet.sql" />
+    <Build Include="StoredProcs\uspAccountLocationTypesGet.sql" />
+    <Build Include="StoredProcs\uspAccountSecurityGet.sql" />
+    <Build Include="StoredProcs\uspAccountTypesTermsStatusGet.sql" />
+    <Build Include="StoredProcs\uspBOMSalesOrderListGet.sql" />
+    <Build Include="StoredProcs\uspCompanyTypesGet.sql" />
+    <Build Include="StoredProcs\uspCurrencyByExternalGet.sql" />
+    <Build Include="StoredProcs\uspFreightPaymentMethodsGet.sql" />
+    <Build Include="StoredProcs\uspItemExternalIdGet.sql" />
+    <Build Include="StoredProcs\uspNavigationRoleForUserSet.sql" />
+    <Build Include="StoredProcs\uspPaymentTermByExternalGet.sql" />
+    <Build Include="StoredProcs\uspItemListSecurityGet.sql" />
+    <Build Include="StoredProcs\uspContactSecurityGet.sql" />
+    <Build Include="StoredProcs\uspItemSecurityGet.sql" />
+    <Build Include="StoredProcs\uspPackageConditionsGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderSecurityGet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionSecurityGet.sql" />
+    <Build Include="StoredProcs\uspQuoteSecurityGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderSecurityGet.sql" />
+    <Build Include="StoredProcs\uspVendorRFQSecurityGet.sql" />
+    <Build Include="StoredProcs\uspPOLineAllocationGet.sql" />
+    <Build Include="StoredProcs\uspOrderFulfillmentGet.sql" />
+    <Build Include="Tables\mapBuyerSORoutes.sql" />
+    <Build Include="Tables\Shipments.sql" />
+    <Build Include="Tables\mapSalesOrderLineShipments.sql" />
+    <Build Include="StoredProcs\uspAccountHierarchiesByExternal.sql" />
+    <Build Include="StoredProcs\uspCountriesGetByExternal.sql" />
+    <Build Include="StoredProcs\uspStatesGetByExternal.sql" />
+    <Build Include="StoredProcs\uspInspectionReportAnswerPhotosGet.sql" />
+    <Build Include="Functions\fnGetUserFirstLastName.sql" />
+    <Build Include="StoredProcs\uspInspectionReportGet.sql" />
+    <Build Include="StoredProcs\uspShipmentSet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLineShipmentsSet.sql" />
+    <Build Include="StoredProcs\uspCarrierMethodsGet_1.sql" />
+    <Build Include="StoredProcs\uspSourceToPO.sql" />
+    <Build Include="StoredProcs\uspAnswersDeleteForCheckList.sql" />
+    <Build Include="StoredProcs\uspAnswersSet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderReportLocationGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderReportDetailsGet.sql" />
+    <Build Include="Functions\fnGetUserFullName.sql" />
+    <Build Include="StoredProcs\uspSalesOrderReportLocationGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderReportDetailsGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderSummaryTotalGet.sql" />
+    <Build Include="Functions\fnGetRecursiveParentOrgID.sql" />
+    <Build Include="Views\vwSalesOrderOrganization.sql" />
+    <Build Include="Storage\ItemsCatalog.sql" />
+    <Build Include="FullTextIndexes.sql" />
+    <Build Include="Storage\SourcePortal2DEV_mod.sql" />
+    <Build Include="Security\SOURCEABILITY_yuli.zhong.sql" />
+    <Build Include="Security\SOURCEABILITY_NathanA.sql" />
+    <Build Include="Security\SOURCEABILITY_Nathan.Ayers.sql" />
+    <Build Include="Security\SOURCEABILITY_Mistiv.sql" />
+    <Build Include="Security\SOURCEABILITY_Misti.Vogt.sql" />
+    <Build Include="Security\SOURCEABILITY_Brigitte.Pardo.sql" />
+    <Build Include="Security\sa_source.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Tables\CarrierMethods.sql" />
+    <Build Include="Tables\CarrierMethods.sql" />
+    <Build Include="Tables\CarrierMethods.sql" />
+    <Build Include="Tables\CarrierMethods.sql" />
+    <Build Include="Tables\Carriers.sql" />
+    <Build Include="Tables\lkpItemListTypes.sql" />
+    <Build Include="Tables\lkpQCResults.sql" />
+    <Build Include="Tables\mapAccountCarriers.sql" />
+    <Build Include="Tables\mapOrgCarriers.sql" />
+    <Build Include="Tables\tbl_BOMCachedResults.sql" />
+    <Build Include="Tables\tempSapRequests.sql" />
+    <Build Include="Tables\WarehouseBins.sql" />
+    <Build Include="Functions\fnGetAccountTypeObjects.sql" />
+    <Build Include="Functions\fnGetDefaultStatus.sql" />
+    <Build Include="Functions\fnGetLocationTypeExternalIds.sql" />
+    <Build Include="Functions\fnGetLocationTypes.sql" />
+    <Build Include="Functions\fnGetNextSalesOrderLineNum.sql" />
+    <Build Include="Functions\fnGetQuoteRouteIcons.sql" />
+    <Build Include="Functions\fnGetRfqLineResponseCount.sql" />
+    <Build Include="Functions\fnGetSOBuyerRoutes.sql" />
+    <Build Include="Functions\fnMomentCount.sql" />
+    <Build Include="Functions\fnProperCase.sql" />
+    <Build Include="Functions\fnStripNonNumeric.sql" />
+    <Build Include="StoredProcs\uspAccountByExternalGet.sql" />
+    <Build Include="StoredProcs\uspAccountCarriersDelete.sql" />
+    <Build Include="StoredProcs\uspAccountCarriersGet.sql" />
+    <Build Include="StoredProcs\uspAccountCarriersSet.sql" />
+    <Build Include="StoredProcs\uspAccountContactsGet.sql" />
+    <Build Include="StoredProcs\uspAccountsByObjectTypeGet.sql" />
+    <Build Include="StoredProcs\uspCarriersGet.sql" />
+    <Build Include="StoredProcs\uspContactByExternalGet.sql" />
+    <Build Include="StoredProcs\uspDocumentGet_OLD.sql" />
+    <Build Include="StoredProcs\uspDocumentsGet.sql" />
+    <Build Include="StoredProcs\uspErrorLogDetailGet.sql" />
+    <Build Include="StoredProcs\uspErrorLogGet.sql" />
+    <Build Include="StoredProcs\uspInvFulfillmentUpdateExisting.sql" />
+    <Build Include="StoredProcs\uspItemDelete.sql" />
+    <Build Include="StoredProcs\uspItemInventoryAllocate.sql" />
+    <Build Include="StoredProcs\uspItemInventoryGet.sql" />
+    <Build Include="StoredProcs\uspLocationByExternalGet.sql" />
+    <Build Include="StoredProcs\uspManufacturersSet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderAllocationGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderLineSet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderOrganizationGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderPriceSumGet.sql" />
+    <Build Include="StoredProcs\uspQCChecklistAssociationsLinkTypesGet.sql" />
+    <Build Include="StoredProcs\uspQCCheckListQuestionGet.sql" />
+    <Build Include="StoredProcs\uspQCCheckListQuestionSet.sql" />
+    <Build Include="StoredProcs\uspQCChecklistSet.sql" />
+    <Build Include="StoredProcs\uspQCChecklistTypeGet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionGet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionUpdate.sql" />
+    <Build Include="StoredProcs\uspQCParentChecklistOptionsGet.sql" />
+    <Build Include="StoredProcs\uspQCQuestionGetbyQuestionId.sql" />
+    <Build Include="StoredProcs\uspQuoteExtrasGet.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesGet.sql" />
+    <Build Include="StoredProcs\uspQuoteTypesGet.sql" />
+    <Build Include="StoredProcs\uspRequestToPurchaseGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLineSapDataSet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLinesAutoRoute.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLinesSpecificRoute.sql" />
+    <Build Include="StoredProcs\uspSoInvFulfillmentSet.sql" />
+    <Build Include="StoredProcs\uspSOLinesByItemIDGet.sql" />
+    <Build Include="StoredProcs\uspSuppliersAccountGroupListGet.sql" />
+    <Build Include="StoredProcs\uspSuppliersLineCardMatch.sql" />
+    <Build Include="StoredProcs\uspUserSet.sql" />
+    <Build Include="Views\vwSalesOrderLineAllocations.sql" />
+    <None Include="InsertScripts\lkpQCResultsInsert.sql" />
+    <None Include="InsertScripts\WarehouseBinsInsert.sql" />
+    <Build Include="StoredProcs\uspCheckListHasQuestion.sql" />
+    <Build Include="StoredProcs\uspGetWarehouses.sql" />
+    <Build Include="StoredProcs\uspGetWarehouseBins.sql" />
+    <Build Include="Tables\ItemInventory.sql" />
+    <Build Include="Tables\ItemStockBreakdown.sql" />
+    <Build Include="Tables\mapQCInspectionStock.sql" />
+    <Build Include="Views\vwStockQty.sql" />
+    <Build Include="Views\vwStockWithFulfillment.sql" />
+    <Build Include="StoredProcs\uspItemStockSet.sql" />
+    <Build Include="StoredProcs\uspItemStockGet.sql" />
+    <Build Include="StoredProcs\uspMapInspectionStockSet.sql" />
+    <Build Include="StoredProcs\uspItemStockListGet.sql" />
+    <Build Include="StoredProcs\uspItemStockBreakdownGet.sql" />
+    <Build Include="StoredProcs\uspQCInspectionResultUpdate.sql" />
+    <Build Include="StoredProcs\uspQCResultsGet.sql" />
+    <Build Include="StoredProcs\uspQCBreakdownReportStockListGet.sql" />
+    <Build Include="StoredProcs\uspQCBreakdownReportSummaryGet.sql" />
+    <Build Include="Tables\lkpShipFromRegions.sql" />
+    <Build Include="Functions\fnReturnOrderDisplayID.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLinesHistoryGet.sql" />
+    <Build Include="StoredProcs\uspQuoteLinesHistoryGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLineShipmentsGet.sql" />
+    <Build Include="StoredProcs\uspSalesOrderLineAllocationsGet.sql" />
+    <Build Include="StoredProcs\uspStateEngineApprovalsSet.sql" />
+    <Build Include="Views\vwAvailableInvPO.sql" />
+    <Build Include="Functions\fnGetWarehouseAcceptedBinID.sql" />
+    <Build Include="StoredProcs\uspItemSearchTotalsGet.sql" />
+    <Build Include="StoredProcs\uspPurchaseOrderLinesHistoryGet.sql" />
+    <Build Include="Tables\Emails.sql" />
+    <Build Include="Tables\lkpEmailTypes.sql" />
+    <Build Include="Tables\mapEmailAttachments.sql" />
+    <Build Include="StoredProcs\uspEmailSet.sql" />
+    <Build Include="StoredProcs\uspEmailsGet.sql" />
+    <Build Include="Tables\StateEngineApprovals.sql" />
+    <Build Include="Tables\mapStateEngineApprovalRoutes.sql" />
+    <Build Include="Functions\fnGetWarehouseRejectedBinID.sql" />
+    <Build Include="StoredProcs\uspShipFromRegionsGet.sql" />
+    <Build Include="Functions\tfnGetWarehouseSoSDetails.sql" />
+    <Build Include="StoredProcs\uspQCIdentifiedStockParametersGet.sql" />
+    <Build Include="StoredProcs\uspQCBreakdownReportTotalGet.sql" />
+    <Build Include="Tables\lkpQCInspectionTypes.sql" />
+    <Build Include="Functions\fnGetSOLine.sql" />
+    <Build Include="StoredProcs\uspItemStockBreakdownSet.sql" />
+    <Build Include="Tables\logReportsGenerated.sql" />
+    <Build Include="StoredProcs\uspLogReportGeneratedIns.sql" />
+    <Build Include="Tables\logEmailsSent.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Sourceportal.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InsertScripts\lkpStatusesInsert.sql" />
+    <None Include="InsertScripts\lkpObjectTypesInsert.sql" />
+    <None Include="InsertScripts\lkpSourceTypesInsert.sql" />
+    <None Include="InsertScripts\lkpItemCommoditiesInsert.sql" />
+    <None Include="InsertScripts\lkpItemGroupsInsert.sql" />
+    <None Include="InsertScripts\ItemsInsert.sql" />
+    <None Include="InsertScripts\codes.lkpPackagingInsert.sql" />
+    <None Include="InsertScripts\codes.lkpIncotermsInsert.sql" />
+    <None Include="InsertScripts\lkpOrganizationsInsert.sql" />
+    <None Include="InsertScripts\lkpCurrenciesInsert.sql" />
+    <None Include="InsertScripts\QuotesInsert.sql" />
+    <None Include="InsertScripts\ItemExtrasInsert.sql" />
+    <None Include="InsertScripts\lkpConfigVariablesInsert.sql" />
+    <None Include="InsertScripts\codes.lkpFreightPaymentMethodsInsert.sql" />
+    <None Include="InsertScripts\lkpAccountTypesInsert.sql" />
+    <None Include="InsertScripts\WarehousesInsert.sql" />
+    <None Include="InsertScripts\PurchaseOrdersInsert.sql" />
+    <None Include="InsertScripts\lkpItemInvStatusesInsert.sql" />
+    <None Include="InsertScripts\ItemInventoryInsert.sql" />
+    <None Include="InsertScripts\codes.lkpPaymentTermsInsert.sql" />
+    <None Include="InsertScripts\lkpCommentTypesInsert.sql" />
+    <None Include="InsertScripts\lkpQCInspectionStatusesInsert.sql" />
+    <None Include="InsertScripts\lkpXlsDataMapInsert.sql" />
+    <None Include="InsertScripts\lkpRegionsInsert.sql" />
+    <None Include="InsertScripts\lkpUserRoleFilterTypesInsert.sql" />
+    <None Include="InsertScripts\lkpNavigationInsert.sql" />
+    <None Include="InsertScripts\lkpFieldsInsert.sql" />
+    <None Include="InsertScripts\lkpPermissionsInsert.sql" />
+    <None Include="InsertScripts\lkpItemListTypes.sql" />
+    <None Include="InsertScripts\lkpDocumentTypes.sql" />
+    <None Include="InsertScripts\Users.sql" />
+    <None Include="InsertScripts\lkpStateEngineConditionsInsert.sql" />
+    <None Include="InsertScripts\lkpAccountHistoryInsert.sql" />
+    <None Include="InsertScripts\lkpRouteStatusesInsert.sql" />
+    <None Include="InsertScripts\lkpCompanyTypesInsert.sql" />
+    <None Include="InsertScripts\lkpStateEngineDynamicValuesInsert.sql" />
+    <None Include="InsertScripts\codes.lkpPackageConditionsInsert.sql" />
+    <None Include="InsertScripts\lkpAccountFocusObjectTypesInsert.sql" />
+    <None Include="InsertScripts\lkpAccountFocusTypesInsert.sql" />
+    <None Include="InsertScripts\lkpAccountStatusesInsert.sql" />
+    <None Include="InsertScripts\lkpContactMethodInsert.sql" />
+    <None Include="InsertScripts\lkpItemStatusesInsert.sql" />
+    <None Include="InsertScripts\lkpLocationTypesInsert.sql" />
+    <None Include="InsertScripts\lkpObjectTypeSecurityInsert.sql" />
+    <None Include="InsertScripts\lkpQuoteTypesInsert.sql" />
+    <None Include="StoredProcs\uspSalesOrderOrganizationGet.sql" />
+    <None Include="InsertScripts\lkpShipFromRegionsInsert.sql" />
+    <None Include="InsertScripts\lkpEmailTypesInsert.sql" />
+    <None Include="Functions\fnGetUserImage.sql" />
+    <None Include="InsertScripts\ContactJobFunctionsInsert.sql" />
+    <None Include="InsertScripts\lkpQCInspectionTypesInsert.sql" />
+    <None Include="StoredProcs\uspLogMailSentSet.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+﻿INSERT INTO lkpCompanyTypes ([Name], ExternalID, CreatedBy) VALUES ('OEM', '107', 0)
+INSERT INTO lkpCompanyTypes ([Name], ExternalID, CreatedBy) VALUES ('EMS', '108', 0)
+INSERT INTO lkpCompanyTypes ([Name], ExternalID, CreatedBy) VALUES ('Distributor', '109', 0)
+INSERT INTO lkpCompanyTypes ([Name], ExternalID, CreatedBy) VALUES ('Broker', '110', 0)
+INSERT INTO lkpCompanyTypes ([Name], ExternalID, CreatedBy) VALUES ('Manufacturer', '111', 0)

@@ -1,0 +1,8 @@
+﻿INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('Active', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('Active-Unconfirmed', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('Contact Mfr', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('Discontinued', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('Discontinued-Unconfirmed', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('EOL', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('NRFND', 0)
+INSERT INTO lkpItemStatuses (Statusname, CreatedBy) VALUES ('Transferred', 0)

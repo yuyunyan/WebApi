@@ -1,0 +1,8 @@
+﻿INSERT INTO lkpRouteStatuses (StatusName, IsDefault, IsComplete, Icon, IconColor, CreatedBy)
+VALUES ('Queue', 1, 0, 'fa-dot-circle-o', '999999', 0)
+INSERT INTO lkpRouteStatuses (StatusName, IsDefault, IsComplete, Icon, IconColor, CreatedBy)
+VALUES ('Waiting', 0, 0, 'fa-clock-o', '999999', 0)
+INSERT INTO lkpRouteStatuses (StatusName, IsDefault, IsComplete, Icon, IconColor, CreatedBy)
+VALUES ('No Stock', 0, 1, 'fa-minus-circle', 'FF0000', 0)
+INSERT INTO lkpRouteStatuses (StatusName, IsDefault, IsComplete, Icon, IconColor, CreatedBy)
+VALUES ('Quoted', 0, 1, 'fa-check-circle', '008000', 0)

@@ -1,0 +1,6 @@
+﻿CREATE FUNCTION [dbo].[fnCanViewLinkPermissionTypeID]()
+RETURNS INT
+AS
+BEGIN
+    RETURN 128
+END

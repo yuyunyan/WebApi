@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[Contacts] (
+    [ContactID]                INT            IDENTITY (1, 1) NOT NULL,
+    [AccountID]                INT            NULL,
+    [FirstName]                VARCHAR (64)   NULL,
+    [LastName]                 VARCHAR (64)   NULL,
+    [OfficePhone]              VARCHAR (32)   NULL,
+    [MobilePhone]              VARCHAR (32)   NULL,
+    [Fax]                      VARCHAR (32)   NULL,
+    [Email]                    VARCHAR (256)  NULL,
+    [Title]                    VARCHAR (256)  NULL,
+    [Details]                  VARCHAR (1024) NULL,
+    [LocationID]               INT            NULL,
+    [PreferredContactMethodID] INT            CONSTRAINT [DF_Contacts_ContactTypeID] DEFAULT ((0)) NULL,
+    [ContactStatusID]          INT            CONSTRAINT [DF_Contacts_ContactStatusID] DEFAULT ((0)) NULL,
+    [IsActive]                 BIT            CONSTRAINT [DF_Contacts_IsActive] DEFAULT ((1)) NULL,
+    [ExternalID]               VARCHAR (50)   NULL,
+    [Created]                  DATETIME       CONSTRAINT [DF__Contacts__Create__6501FCD8] DEFAULT (getutcdate()) NULL,
+    [CreatedBy]                INT            NULL,
+    [Modified]                 DATETIME       NULL,
+    [ModifiedBy]               INT            NULL,
+    [IsDeleted]                BIT            CONSTRAINT [DF_Contacts_IsDeleted] DEFAULT ((0)) NOT NULL,
+    [Department]               VARCHAR (256)  NULL,
+    [JobFunctionID]            INT            NULL,
+    [Birthdate]                DATE           NULL,
+    [Gender]                   VARCHAR (50)   NULL,
+    [Salutation]               VARCHAR (50)   NULL,
+    [MaritalStatus]            VARCHAR (50)   NULL,
+    [KidsNames]                VARCHAR (50)   NULL,
+    [ReportsTo]                VARCHAR (256)  NULL,
+    CONSTRAINT [PK__Contacts__5C6625BB52DD1295] PRIMARY KEY CLUSTERED ([ContactID] ASC)
+);
+
+

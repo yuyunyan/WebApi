@@ -1,0 +1,8 @@
+﻿INSERT INTO lkpQCResults (ResultName, IsRejected, DecisionCode, AcceptanceCode, CreatedBy)
+VALUES ('Accepted - No Deviations', 0, 'S_A100', 'AP', 0)
+INSERT INTO lkpQCResults (ResultName, IsRejected, DecisionCode, AcceptanceCode, CreatedBy)
+VALUES ('Accepted - Minor Deviations', 0, 'S_A080', 'AP', 0)
+INSERT INTO lkpQCResults (ResultName, IsRejected, DecisionCode, AcceptanceCode, CreatedBy)
+VALUES ('Rejected - Major Deviations', 0, 'S_R040', 'RE', 0)
+INSERT INTO lkpQCResults (ResultName, IsRejected, DecisionCode, AcceptanceCode, CreatedBy)
+VALUES ('Rejected - Critical Deviations', 0, 'S_R020', 'RE', 0)

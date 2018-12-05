@@ -1,0 +1,2 @@
+﻿CREATE USER [SOURCEABILITY\yuli.zhong] FOR LOGIN [SOURCEABILITY\yuli.zhong];
+

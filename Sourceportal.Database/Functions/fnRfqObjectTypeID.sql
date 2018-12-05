@@ -1,0 +1,6 @@
+﻿CREATE FUNCTION [dbo].[fnRfqObjectTypeID]()
+RETURNS INT
+AS
+BEGIN
+    RETURN 27
+END

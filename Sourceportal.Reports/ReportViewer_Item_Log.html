@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Adding Telerik HTML5 Report Viewer page log</title>
+    <style>
+        body {
+            background: #fff;
+            color: #505050;
+            font: 14px 'Segoe UI', tahoma, arial, helvetica, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        #header {
+            background: #efefef;
+            padding: 0;
+        }
+
+        /* Start: Toggle details */
+        label { 
+            top:0; 
+            left:0; 
+            font-weight:700; 
+            margin-top: 10px;
+            user-select: none;
+            -ms-user-select: none;
+        }
+
+            label:hover{
+                color: cadetblue;
+                border-color: #505050;
+            }
+
+        input#show, input#hide {
+            display:none;
+        }
+
+        ul#details {
+            transition: opacity 1s ease-out;
+            opacity: 0; 
+            height: 0;
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        input#show:checked ~ .show:before {
+            content: "";
+        }
+
+        input#show:checked ~ .hide:before {
+            content: "Hide details";
+            border: solid;
+            padding: 3px;
+        }
+
+        input#hide:checked ~ .hide:before {
+            content: "";
+        }
+
+        input#hide:checked ~ .show:before {
+            content: "Show details"; 
+            border: solid;
+            padding: 3px;
+        }
+
+        input#show:checked ~ ul#details {
+            opacity: 1;
+            font-size: 100%;
+            height: auto;
+            padding: 10px;
+        }
+
+        input#hide:checked ~ ul#details {
+            transition: opacity 1s ease-out;
+            opacity: 0; 
+            height: 0;
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        /* End: toggle details */
+
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 30px;
+            line-height: 150px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff;
+            background: #969696;
+            padding: 0 30px;
+            line-height: 50px;
+        }
+
+        #main {
+            padding: 5px 30px;
+        }
+
+        .section {
+            width: 21.7%;
+            float: left;
+            margin: 0 0 0 40px;
+        }
+
+            .section h2 {
+                font-size: 13px;
+                text-transform: uppercase;
+                margin: 0;
+                border-bottom: 1px solid silver;
+                padding-bottom: 12px;
+                margin-bottom: 8px;
+            }
+
+            .section.first {
+                margin-left: 0;
+                width: 25%
+            }
+
+                .section.first h2 {
+                    font-size: 20px;
+                    text-transform: none;
+                    margin-bottom: 16px;
+                    border: none;
+                }
+
+                .section.first li {
+                    border-top: 1px solid silver;
+                    padding: 8px 0;
+                }
+
+            .section.last {
+                margin-right: 0;
+                width: 70%;
+            }
+            
+            .section.last h2 {
+                    font-size: 20px;
+                    text-transform: none;
+                    margin-bottom: 5px;
+                    border: none;
+                }
+
+            .section.last li {
+                padding: 4px 0;
+                border-bottom: solid;
+                border-bottom-width: 1px;
+                border-color: lightgray;
+            }
+            
+            .section.last ul{
+                padding-bottom:10px;   
+                margin-bottom: 10px; 
+            }
+            
+                
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 20px;
+        }
+
+
+
+        a {
+            color: #267cb2;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <p><span style="color: red;">ERROR!</span> An error occurred while adding an HTML page with Telerik HTML5 Report Viewer</p>
+    </div>
+
+    <div id="main">
+        <div class="section first">
+            <h2>Telerik HTML5 Report Viewer enabled application consists of: </h2>
+            <ul>
+                <li><a href="http://www.telerik.com/help/reporting/html5-report-viewer.html" >HTML5 Report Viewer</a> prerequisites</li>
+                <li>HTML page with HTML5 Report Viewer</li>
+                <li><a href="http://www.telerik.com/help/reporting/telerik-reporting-rest-conception.html" >Telerik Reporting REST Service</a> with its prerequisites</li>
+            </ul>
+        </div>
+
+        <div class="section last">
+            <h2>Summary</h2>
+            <ul style="padding-bottom: 10px; padding-left: 7px;">
+                <li style="color: #FF0000;">Error: Fail to add project reference System.Runtime.InteropServices.COMException (0x80004005): Adding 'Sourceportal.Reports' as a project-to-project reference would cause this project to reference itself.
+   at VSLangProj.References.AddProject(Project pProject)
+   at Telerik.Reporting.Vs.Common.ProjectManager.TryAddProjectReference(Project projectToReference)</li>
+<li style="color: #FF6600;">Warning: Could not add connection string to the configuration file. Please add the following connection string manually:</li>
+<li style="color: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;connectionStrings&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="Sourceportal.Reports.Properties.Settings.SourcePortalConnection"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connectionString="Data Source=data-sql02-us.sourceability.local;Initial Catalog=SourcePortal2_DEV;Persist Security Info=True;User ID=sa_portal;Password=T7iuthou"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;providerName="System.Data.SqlClient" /&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/connectionStrings&gt;</li>
+<li style="color: none;"></li>
+<li style="color: none;">Reference added: Telerik.Reporting.Services.WebApi</li>
+<li style="color: none;">Reference added: Telerik.Reporting.XpsRendering</li>
+<li style="color: none;">The referenced System.Net.Http assembly version is newer. Added binding redirect.</li>
+<li style="color: none;">The referenced System.Net.Http.WebRequest assembly version is newer. Added binding redirect.</li>
+<li style="color: none;">Installed NuGet package: Microsoft.AspNet.WebApi.Client 4.0.30506</li>
+<li style="color: none;">Installed NuGet package: Microsoft.AspNet.WebApi.Core 4.0.30506</li>
+<li style="color: none;">Installed NuGet package: Microsoft.Web.Infrastructure 1.0.0.0</li>
+<li style="color: none;">Installed NuGet package: Microsoft.AspNet.WebApi.WebHost 4.0.30506</li>
+<li style="color: none;">Needs to modify the Global.asax: True</li>
+<li style="color: none;">Added Global.asax</li>
+<li style="color: none;">Registered REST Report Service routes in Global.asax</li>
+<li style="color: none;">Added ReportViewer.html</li>
+<li style="color: none;">Added folder: Controllers</li>
+<li style="color: none;">Added ReportsController.cs</li>
+<li style="color: none;">Added folder: ReportViewer</li>
+<li style="color: none;">Added folder: js</li>
+<li style="color: none;">Added telerikReportViewer-11.2.17.1025.min.js</li>
+<li style="color: none;">Added telerikReportViewer.kendo-11.2.17.1025.min.js</li>
+
+            </ul>
+
+            <input type="radio" id="show" name="group" />   
+            <input type="radio" id="hide" name="group" checked />
+            <label for="hide" class="hide" unselectable="on"></label>
+            <label for="show" class="show" unselectable="on"></label> 
+
+            <ul id="details">
+                12/18/17 2:12:35 PM
+<li style="color: none;">Build Started</li>
+<li style="color: none;">Check Framework Support</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : Newtonsoft.Json</li>
+<li style="color: none;">Assembly Version: 7.0.0.0</li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Core</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Drawing</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Net.Http</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Net.Http.WebRequest</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Web</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Xml.Linq</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Windows.Forms</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Data.DataSetExtensions</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : Microsoft.CSharp</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Data</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : System.Xml</li>
+<li style="color: none;">Assembly Version: </li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Assembly name is null: False</li>
+<li style="color: none;">Assembly : Telerik.Reporting</li>
+<li style="color: none;">Assembly Version: 11.2.17.1025</li>
+<li style="color: none;">Product Version: 11.2.17.1025</li>
+<li style="color: none;">Verify Telerik Reporting Version: True</li>
+<li style="color: none;">Build Completed</li>
+<li style="color: none;">Check project: Sourceportal.API</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Check project: Sourceportal.DB</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Check project: Sourceportal.Domain</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Check project: SourcePortal.Services</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Check project: Sourceportal.ServiceTests</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Check project: Sourceportal.Database</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Can not get project Sourceportal.Database references.</li>
+<li style="color: none;">Check project: Sourceportal.Utilities</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Check project: Miscellaneous Files</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Can not get project Miscellaneous Files references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Can not get project Sourceportal.Database references.</li>
+<li style="color: none;">Probe for types project: Sourceportal.Database</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Probe for types project: Sourceportal.Reports</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Can not get project Miscellaneous Files references.</li>
+<li style="color: none;">Probe for types project: Miscellaneous Files</li>
+<li style="color: none;">Initialize available report types.</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is found in Sourceportal.Reports project.</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: #FF0000;">Error: Fail to add project reference System.Runtime.InteropServices.COMException (0x80004005): Adding 'Sourceportal.Reports' as a project-to-project reference would cause this project to reference itself.
+   at VSLangProj.References.AddProject(Project pProject)
+   at Telerik.Reporting.Vs.Common.ProjectManager.TryAddProjectReference(Project projectToReference)</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is not found</li>
+<li style="color: none;">Class with name QuoteDetails is found in Sourceportal.Reports project.</li>
+<li style="color: none;">Connection Name Sourceportal.Reports.Properties.Settings.SourcePortalConnection</li>
+<li style="color: none;">Connection String Data Source=data-sql02-us.sourceability.local;Initial Catalog=SourcePortal2_DEV;Persist Security Info=True;User ID=sa_portal;Password=T7iuthou</li>
+<li style="color: none;">Connection Type Configuration</li>
+<li style="color: none;">Connection ProviderName System.Data.SqlClient</li>
+<li style="color: none;">System.ArgumentException: Value does not fall within the expected range.
+   at Microsoft.VisualStudio.Editors.SettingsDesigner.DesignTimeSettings.Add(DesignTimeSettingInstance Instance, Boolean MakeNameUnique)
+   at Microsoft.VisualStudio.Editors.SettingsGlobalObjects.SettingsFileGlobalObject.GlobalSettingsPropertyCollection.OnAddComplete(SettingsProperty prop)
+   at System.Configuration.SettingsPropertyCollection.Add(SettingsProperty property)
+   at Microsoft.VSDesigner.VSDesignerPackage.AppSettingsHelper.AddConnectionToAppSettings(IServiceProvider serviceProvider, Project project, DataConnection connection)
+   at Microsoft.VSDesigner.VSDesignerPackage.GlobalConnectionService.Microsoft.VSDesigner.VSDesignerPackage.IGlobalConnectionService.AddConnectionToAppSettings(IServiceProvider serviceProvider, Project project, DataConnection connection)
+   at Telerik.Reporting.Design.VisualStudio.Data.DataConnectionManager.AddConfigurationConnection(DataConnectionInfo dataConnectionInfo, Project targetProject)
+   at Telerik.ReportViewer.Design.Common.ConnectionStringManager.InsertConnectionsForReport(Type type, Project targetProject)</li>
+<li style="color: #FF6600;">Warning: Could not add connection string to the configuration file. Please add the following connection string manually:</li>
+<li style="color: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;connectionStrings&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add name="Sourceportal.Reports.Properties.Settings.SourcePortalConnection"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connectionString="Data Source=data-sql02-us.sourceability.local;Initial Catalog=SourcePortal2_DEV;Persist Security Info=True;User ID=sa_portal;Password=T7iuthou"<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;providerName="System.Data.SqlClient" /&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/connectionStrings&gt;</li>
+<li style="color: none;"></li>
+<li style="color: none;">Add service controller and API references: True</li>
+<li style="color: none;">Add required references.</li>
+<li style="color: none;">Add project references</li>
+<li style="color: none;">Get project references.</li>
+<li style="color: none;">Reference already available: Telerik.Reporting, Version=11.2.17.1025, Culture=neutral, PublicKeyToken=a9d7983dfcc261be</li>
+<li style="color: none;">Add project references</li>
+<li style="color: none;">Reference added: Telerik.Reporting.Services.WebApi</li>
+<li style="color: none;">Reference added: Telerik.Reporting.XpsRendering</li>
+<li style="color: none;">Verify Newtonsoft.Json package version</li>
+<li style="color: none;">Is Newtonsoft.Json reference version compatible. Current: 7.0.0.0 | Required 7.0.0.0</li>
+<li style="color: none;">Verify Microsoft.Net.Http package version</li>
+<li style="color: none;">Is System.Net.Http reference version compatible. Current: 4.0.0.0 | Required 2.0.0.0</li>
+<li style="color: none;">The referenced System.Net.Http assembly version is newer. Added binding redirect.</li>
+<li style="color: none;">Is System.Net.Http.WebRequest reference version compatible. Current: 4.0.0.0 | Required 2.0.0.0</li>
+<li style="color: none;">The referenced System.Net.Http.WebRequest assembly version is newer. Added binding redirect.</li>
+<li style="color: none;">Verify Microsoft.AspNet.WebApi.Client package version</li>
+<li style="color: none;">Installed NuGet package: Microsoft.AspNet.WebApi.Client 4.0.30506</li>
+<li style="color: none;">Verify Microsoft.AspNet.WebApi.Core package version</li>
+<li style="color: none;">Installed NuGet package: Microsoft.AspNet.WebApi.Core 4.0.30506</li>
+<li style="color: none;">Verify Microsoft.Web.Infrastructure package version</li>
+<li style="color: none;">Installed NuGet package: Microsoft.Web.Infrastructure 1.0.0.0</li>
+<li style="color: none;">Verify Microsoft.AspNet.WebApi.WebHost package version</li>
+<li style="color: none;">Installed NuGet package: Microsoft.AspNet.WebApi.WebHost 4.0.30506</li>
+<li style="color: none;">Needs to modify the Global.asax: True</li>
+<li style="color: none;">Added Global.asax</li>
+<li style="color: none;">Enhance Global.asax</li>
+<li style="color: none;">Namespace Kind: vsCMElementNamespace</li>
+<li style="color: none;">Register routes</li>
+<li style="color: none;">Is REST Report Service route registered: False</li>
+<li style="color: none;">Registered REST Report Service routes in Global.asax</li>
+<li style="color: none;">Class with name ReportsController is not found</li>
+<li style="color: none;">Adding TelerikViewerPage.html.ServiceUrl project item</li>
+<li style="color: none;">Added ReportViewer.html</li>
+<li style="color: none;">Adding TelerikViewerPage.html.ReportServer project item</li>
+<li style="color: none;">Added folder: Controllers</li>
+<li style="color: none;">Added ReportsController.cs</li>
+<li style="color: none;">Added folder: ReportViewer</li>
+<li style="color: none;">Added folder: js</li>
+<li style="color: none;">Added telerikReportViewer-11.2.17.1025.min.js</li>
+<li style="color: none;">Folder ReportViewer already exists</li>
+<li style="color: none;">Folder js already exists</li>
+<li style="color: none;">Added telerikReportViewer.kendo-11.2.17.1025.min.js</li>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

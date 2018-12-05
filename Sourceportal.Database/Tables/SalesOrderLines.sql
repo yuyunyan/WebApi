@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[SalesOrderLines] (
+    [SOLineID]           INT           IDENTITY (1, 1) NOT NULL,
+    [SalesOrderID]       INT           NOT NULL,
+    [SOVersionID]        INT           NOT NULL,
+    [QuoteLineID]        INT           NULL,
+    [StatusID]           INT           NOT NULL,
+    [ItemID]             INT           NOT NULL,
+	[ProcWarehouseID]	 INT		   NULL,
+    [LineNum]            INT           NOT NULL,
+    [CustomerLine]       INT           NULL,
+    [CustomerPartNum]    NVARCHAR (32) NULL,
+    [PartNumberStrip]    NVARCHAR (32) NOT NULL,
+    [Qty]                INT           NOT NULL,
+    [Price]              MONEY         NOT NULL,
+    [Cost]               MONEY         NOT NULL,
+    [DateCode]           NVARCHAR (25) NULL,
+    [PackagingID]        INT           NULL,
+    [PackageConditionID] INT           NULL,
+    [ShipDate]           DATE          NULL,
+    [DueDate]            DATE          NULL,
+    [Created]            DATETIME      CONSTRAINT [DF__SalesOrde__Creat__6FD49106] DEFAULT (getutcdate()) NOT NULL,
+    [CreatedBy]          INT           NOT NULL,
+    [Modified]           DATETIME      NULL,
+    [ModifiedBy]         INT           NULL,
+    [IsDeleted]          BIT           CONSTRAINT [DF__SalesOrde__IsDel__70C8B53F] DEFAULT ((0)) NOT NULL,
+    [ProductSpec]        VARCHAR (50)  NULL,
+    [DeliveryRuleID]     INT           NULL,
+	[DeliveryStatus]	 VARCHAR(100)  NULL,
+	[InvoiceStatus]	     VARCHAR(100)  NULL,
+    CONSTRAINT [PK__SalesOrd__599D14357D59243A] PRIMARY KEY CLUSTERED ([SOLineID] ASC)
+);
+
+

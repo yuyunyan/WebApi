@@ -1,0 +1,7 @@
+﻿INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('New', '1', 1, 0)
+INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('Released', '2', 0, 0)
+INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('Inspection Prepared', '3', 0, 0)
+INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('Results Recorded', '4', 0, 0)
+INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('Decision Made', '5', 0, 0)
+INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('Decision Revoked', '6', 0, 0)
+INSERT INTO lkpQCInspectionStatuses (StatusName, ExternalID, IsDefault, CreatedBy) VALUES ('Canceled', '7', 0, 0)

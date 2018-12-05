@@ -1,0 +1,6 @@
+﻿INSERT INTO lkpRegions (RegionName, CreatedBy)
+VALUES ('Americas', 0)
+INSERT INTO lkpRegions (RegionName, CreatedBy)
+VALUES ('EMEA', 0)
+INSERT INTO lkpRegions (RegionName, CreatedBy)
+VALUES ('APAC', 0)

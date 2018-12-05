@@ -1,0 +1,6 @@
+﻿CREATE FUNCTION [dbo].[fnSalesOrderObjectTypeID]()
+RETURNS INT
+AS
+BEGIN
+    RETURN 16
+END

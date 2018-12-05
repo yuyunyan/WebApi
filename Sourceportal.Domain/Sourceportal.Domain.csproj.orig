@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{030C5DF9-5AC7-4B21-9BB2-005D36F3D67D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sourceportal.Domain</RootNamespace>
+    <AssemblyName>Sourceportal.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elasticsearch.Net, Version=5.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.5.5.0\lib\net46\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest, Version=5.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.5.5.0\lib\net46\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\API\Requests\Accounts\AccountGroupDeleteRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\AccountGroupSetRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\AccountHierarchySapDetails.cs" />
+    <Compile Include="Models\API\Requests\Accounts\AccountsFilter.cs" />
+    <Compile Include="Models\API\Requests\Accounts\AccountTypeDetailsSap.cs" />
+    <Compile Include="Models\API\Requests\Accounts\ContactsFilter.cs" />
+    <Compile Include="Models\API\Requests\Accounts\OwnerSetRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\OwnersRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SetAccountExternalIdsRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SetAccountFocusRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SetContactFocusesRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SetContactOwnershipRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SetContactDetailsRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SetContactProjectsRequest.cs" />
+    <Compile Include="Models\API\Requests\Accounts\SupplierLineCardMatchRequest.cs" />
+    <Compile Include="Models\API\Requests\BOMs\BOMBody.cs" />
+    <Compile Include="Models\API\Requests\BOMs\BomSearchRequest.cs" />
+    <Compile Include="Models\API\Requests\BOMs\ItemListLineRequest.cs" />
+    <Compile Include="Models\API\Requests\BOMs\ProcessMatchRequest.cs" />
+    <Compile Include="Models\API\Requests\BOMs\XLSDataMapIDList.cs" />
+    <Compile Include="Models\API\Requests\BOMs\XLSDataMapObject.cs" />
+    <Compile Include="Models\API\Requests\Carrier\AccountCarrierInsertUpdateRequest.cs" />
+    <Compile Include="Models\API\Requests\Carrier\DeleteCarrierRequest.cs" />
+    <Compile Include="Models\API\Requests\CommonData\GridSettingsRequest.cs" />
+    <Compile Include="Models\API\Requests\Documents\DocumentRequest.cs" />
+    <Compile Include="Models\API\Requests\Comments\SetCommentRequest.cs" />
+    <Compile Include="Models\API\Requests\ErrorLog\ErrorLogListRequest.cs" />
+    <Compile Include="Models\API\Requests\ErrorLog\LogToDbRequest.cs" />
+    <Compile Include="Models\API\Requests\Items\SetManufacturerRequest.cs" />
+    <Compile Include="Models\API\Requests\OrderFulfillment\InboundDeliverySapRequest.cs" />
+    <Compile Include="Models\API\Requests\OrderFulfillment\OrderFulfillmentListSearchFilter.cs" />
+    <Compile Include="Models\API\Requests\OrderFulfillment\OrderFulfillmentQtySetRequest.cs" />
+    <Compile Include="Models\API\Requests\OrderFulfillment\RequestToPurchaseListRequest.cs" />
+    <Compile Include="Models\API\Requests\OrderFulfillment\UnallocatedSOLinesGetRequest.cs" />
+    <Compile Include="Models\API\Requests\Ownership\GetOwnershipRequest.cs" />
+    <Compile Include="Models\API\Requests\Ownership\SetOwnershipRequest.cs" />
+    <Compile Include="Models\API\Requests\PurchaseOrders\SetPurchaseItemsFlaggedRequest.cs" />
+    <Compile Include="Models\API\Requests\PurchaseOrders\SetPurchaseOrderExtraRequest.cs" />
+    <Compile Include="Models\API\Requests\PurchaseOrders\SetPurchaseOrderLineRequest.cs" />
+    <Compile Include="Models\API\Requests\PurchaseOrders\SetPurchaseOrderDetailsRequest.cs" />
+    <Compile Include="Models\API\Requests\PurchaseOrders\SetPurchaseOrderSapDataRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\QuestionDeleteRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\QuestionRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\ChecklistAssociationDeleteRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\InpsectionConclusionRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\ChecklistAssociationSetRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\SaveAnswerRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\CheckListRequest.cs" />
+    <Compile Include="Models\API\Requests\QC\SetInspectionFromSapRequest.cs" />
+    <Compile Include="Models\API\Requests\Quotes\QuotePartsFilter.cs" />
+    <Compile Include="Models\API\Requests\Quotes\RouteQuoteLineRequest.cs" />
+    <Compile Include="Models\API\Requests\Quotes\SetQuoteExistingCustomerRequest.cs" />
+    <Compile Include="Models\API\Requests\Quotes\SetQuoteNewCustomerRequest.cs" />
+    <Compile Include="Models\API\Requests\SalesOrders\SetExternalIdRequest.cs" />
+    <Compile Include="Models\API\Requests\SalesOrders\SetSalesOrderSapDataRequest.cs" />
+    <Compile Include="Models\API\Requests\Security\UserNavigationRoleSetRequest.cs" />
+    <Compile Include="Models\API\Requests\Shipments\OutboundDeliverySapRequest.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SetBuyerRouteRequest.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SourceQuoteLineRequest.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SourceToPORequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\RfqSendToSupplierRequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\SetRfqItemsFlaggedRequest.cs" />
+    <Compile Include="Models\API\Requests\WorkflowManagement\RuleActionRequest.cs" />
+    <Compile Include="Models\API\Requests\WorkflowManagement\RuleDetailSetRequest.cs" />
+    <Compile Include="Models\API\Requests\WorkflowManagement\RuleGroupRequest.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountDbErrors.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountFocusResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountGroupDetailResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountGroupListResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountHierarchiesGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountsListResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountTypesDataResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactFocusesGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactJobFunctionListGetReponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactProjectsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\FocusObjectTypeResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\FocusTypeResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\NewAccountDetails.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactByAccountIdResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\BOMDbErrors.cs" />
+    <Compile Include="Models\API\Responses\BOMs\BOMListResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\BomProcessMatchResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\CustomerQuoteBomResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\CustomerRFQBomResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\EMSBomResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\InventoryBomResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\OutsideOffersBomResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\PurchaseOrderBomResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\ResultSummaryResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\SalesOrderResponse.cs" />
+    <Compile Include="Models\API\Responses\BOMs\UploadBOMResponse.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\RfqLineResponseSaveRequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\RfqLineSaveRequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\VendorRfqCreateNewRequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\VendorRfqLineResponsesGetRequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\VendorRfqLinesGetRequest.cs" />
+    <Compile Include="Models\API\Requests\VendorRfqs\VendorRfqSaveRequest.cs" />
+    <Compile Include="Models\API\Responses\BOMs\VendorQuotesBomResponse.cs" />
+    <Compile Include="Models\API\Responses\Carrier\AccountCarrierListResponse.cs" />
+    <Compile Include="Models\API\Responses\Carrier\CarrierListRespose.cs" />
+    <Compile Include="Models\API\Responses\Comments\CommentDbErrors.cs" />
+    <Compile Include="Models\API\Responses\CommonData\ConfigValueResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\DeliveryRuleListResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\ExportResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\FreightPaymentMethodsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\IncotermsResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\OrganizationsResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\ShippingMethodResponse.cs" />
+    <Compile Include="Models\API\Responses\Documents\DocumentDownloadResponse.cs" />
+    <Compile Include="Models\API\Responses\Documents\DocumentListResponse.cs" />
+    <Compile Include="Models\API\Responses\ErrorLog\ErrorLogDetailResponse.cs" />
+    <Compile Include="Models\API\Responses\ErrorLog\ErrorLogListResponse.cs" />
+    <Compile Include="Models\API\Responses\Images\DocumentDbErrors.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemDbErrors.cs" />
+    <Compile Include="Models\API\Responses\Items\PartSearchResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\SetManufacturerResponse.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\OFBuyerResponse.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\OFDbErrors.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\OFGridExportLine.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\SOAllocationListResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\ItemMfrResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PODbErrors.cs" />
+    <Compile Include="Models\API\Responses\CommonData\AccountsByObjectTypeResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\GridSettingsResponse.cs" />
+    <Compile Include="Models\API\Responses\ObjectTypes\ObjectTypeIdResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\AnswerTypesResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\CheckListAssociationsLinkTypesResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\CheckListAssociationsResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\CheckListParentOptionsResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\CheckListSetResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\CheckListTypeResponse.cs" />
+    <Compile Include="Models\API\Responses\Images\FileResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\ChecklistResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\InspectionCheckListsResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\InspectionDbErrors.cs" />
+    <Compile Include="Models\API\Responses\QC\InspectionDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\InspectionConclusionResponse.cs" />
+    <Compile Include="Models\API\Requests\Quotes\DeleteQuoteParts.cs" />
+    <Compile Include="Models\API\Requests\Quotes\QuoteToSORequest.cs" />
+    <Compile Include="Models\API\Requests\SalesOrders\SalesOrderDetailsRequest.cs" />
+    <Compile Include="Models\API\Requests\SalesOrders\SetSalesOrderExtraRequest.cs" />
+    <Compile Include="Models\API\Requests\SalesOrders\SetSalesOrderLinesRequest.cs" />
+    <Compile Include="Models\API\Requests\SearchFilter.cs" />
+    <Compile Include="Models\API\Requests\Items\SetItemDetailsRequest.cs" />
+    <Compile Include="Models\API\Requests\Quotes\SetPartsListRequest.cs" />
+    <Compile Include="Models\API\Requests\Quotes\SetQuoteDetailsRequest.cs" />
+    <Compile Include="Models\API\Requests\Quotes\SetQuoteExtraRequest.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SetSourceRequest.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SetSourceStatus.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SourceCommentUIDRequest.cs" />
+    <Compile Include="Models\API\Requests\Sourcing\SourcingQuoteLinesFilter.cs" />
+    <Compile Include="Models\API\Requests\UserRolesSaveRequest.cs" />
+    <Compile Include="Models\API\Requests\RoleCreateUpdateDeleteRequest.cs" />
+    <Compile Include="Models\API\Requests\UserUpdateRequest.cs" />
+    <Compile Include="Models\API\Requests\UserSetStatusRequet.cs" />
+    <Compile Include="Models\API\Requests\UserCreateRequest.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountLocationResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactDetailOptionsResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactMethod.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactStatus.cs" />
+    <Compile Include="Models\API\Responses\Accounts\State.cs" />
+    <Compile Include="Models\API\Responses\Accounts\Country.cs" />
+    <Compile Include="Models\API\Responses\Accounts\StateListResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\LocationType.cs" />
+    <Compile Include="Models\API\Responses\Accounts\BasicDetailsOptions.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountBasicDetails.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountStatus.cs" />
+    <Compile Include="Models\API\Responses\Accounts\AccountType.cs" />
+    <Compile Include="Models\API\Responses\Accounts\CompanyType.cs" />
+    <Compile Include="Models\API\Responses\Accounts\ContactListResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\CountryListResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\LocationTypesResponse.cs" />
+    <Compile Include="Models\API\Responses\Accounts\Owner.cs" />
+    <Compile Include="Models\API\Responses\BaseResponse.cs" />
+    <Compile Include="Models\API\Responses\Comments\CommentsResponse.cs" />
+    <Compile Include="Models\API\Responses\Comments\CommentTypeIdResponse.cs" />
+    <Compile Include="Models\API\Responses\Comments\CommentTypeIdsResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\CurrencyResponse.cs" />
+    <Compile Include="Models\API\Responses\CommonData\StatusListResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemCommodityListResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemExtraListResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemGroupListResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemsResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemStatus.cs" />
+    <Compile Include="Models\API\Responses\Items\ManufacturerListResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\ItemListResponse.cs" />
+    <Compile Include="Models\API\Responses\Items\SetItemDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\ObjectTypeIdResponse.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\OrderFulfillmentAvailabilityResponse.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\OrderFulfillmentResponse.cs" />
+    <Compile Include="Models\API\Responses\OrderFulfillment\SetOrderFulfillmentQtyResponse.cs" />
+    <Compile Include="Models\API\Responses\Ownership\GetOwnershipResponse.cs" />
+    <Compile Include="Models\API\Responses\Ownership\SetOwnershipResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\CurrencyListResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PaymentTermResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PurchaseOrderDetailsSetResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PurchaseOrderExtraDeleteResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PurchaseOrderExtraResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\GetPurchaseOrderLinesResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PurchaseOrderLinesDeleteResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\PurchaseOrderListResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\SetPurchaseOrderExtraResponse.cs" />
+    <Compile Include="Models\API\Responses\PurchaseOrders\SetPurchaseOrderLineResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\InspectionGridResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\QuestionByCheckListResponse.cs" />
+    <Compile Include="Models\API\Responses\QC\QuestionSetResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteDbErrors.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuotePart.cs" />
+    <Compile Include="Models\API\Responses\Quotes\AccountContact.cs" />
+    <Compile Include="Models\API\Responses\Quotes\AccountShipAddress.cs" />
+    <Compile Include="Models\API\Responses\Quotes\CommodityOptionsResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\CustomerAccount.cs" />
+    <Compile Include="Models\API\Responses\Quotes\PackagingOptionsResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\PartDetails.cs" />
+    <Compile Include="Models\API\Responses\Quotes\PartsResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteExtraResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteHeaderResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteListResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteOptionsResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuotePartsDeleteResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuotePrint.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteRouteToResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteStatus.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteToSOResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteType.cs" />
+    <Compile Include="Models\API\Responses\Quotes\QuoteTypesResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\SetQuoteDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\Quotes\SetQuoteExtraResponse.cs" />
+    <Compile Include="Models\API\Responses\Response.cs" />
+    <Compile Include="Models\API\Responses\RFQ\RfqDbErrors.cs" />
+    <Compile Include="Models\API\Responses\RFQ\RfqDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\RFQ\RfqLineResponsesResponse.cs" />
+    <Compile Include="Models\API\Responses\RFQ\RfqLinesResponse.cs" />
+    <Compile Include="Models\API\Responses\RFQ\RfqListResponse.cs" />
+    <Compile Include="Models\API\Responses\RoleCreateResponse.cs" />
+    <Compile Include="Models\API\Responses\Roles\RoleTypeOptionsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\AccountsResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\GetSalesOrderLinesResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SalesOrderDbErrors.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SalesOrderDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SalesOrderExtraResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SalesOrderExtrasDeleteResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SalesOrderLinesDeleteResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SalesOrderListResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SetSalesOrderExtraResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\FilterObjectListGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\GeneralSecurityGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\NavigationsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\ObjectTypeSecuritiesGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\SecurityTypeListGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\UserNavigationRoleSetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\UserNavigationRolesGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\UserObjectSecurityGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Security\UserRoleSetResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\QuoteLineBuyersGetResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SetSourceResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourceCommentUIDResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourceGridExportLine.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourceListResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourceTypesResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourcingDbErrors.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourcingQuoteLinesResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourcingRouteStatusesResponse.cs" />
+    <Compile Include="Models\API\Responses\Sourcing\SourcingStatusesResponse.cs" />
+    <Compile Include="Models\API\Responses\SalesOrders\SetSalesOrderLinesResponse.cs" />
+    <Compile Include="Models\API\Responses\Sync\SynchronousResponses\InventoryAllocateSyncResponse.cs" />
+    <Compile Include="Models\API\Responses\Sync\SynchronousResponses\PoAllocateSyncResponse.cs" />
+    <Compile Include="Models\API\Responses\Sync\SyncResponse.cs" />
+    <Compile Include="Models\API\Responses\UploadXls\UploadDbErrors.cs" />
+    <Compile Include="Models\API\Responses\UploadXls\XlsAccountGetResponse.cs" />
+    <Compile Include="Models\API\Responses\UploadXls\XlsDataMapGetResponse.cs" />
+    <Compile Include="Models\API\Responses\UserRolesResponse.cs" />
+    <Compile Include="Models\API\Responses\RoleDetailsResponse.cs" />
+    <Compile Include="Models\API\Responses\UserModel.cs" />
+    <Compile Include="Models\API\Responses\UserRoleResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\RuleDetailSetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\RuleObjectTypesGetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineActionsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineConditionsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineDynamicValue.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineRuleGroupsGetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineRulesGetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineTriggersGetResponse.cs" />
+    <Compile Include="Models\API\Responses\WorkflowManagement\StateEngineRuleActionsGetResponse.cs" />
+    <Compile Include="Models\DB\Accounts\AccountBasicDetailsDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountByTypeDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountFocusDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountFocusObjectTypeDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountFocusTypeDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountGroupDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountGroupDetailDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountHierarchyDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountsDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountLocationTypeDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountStatusDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountTypeDb.cs" />
+    <Compile Include="Models\DB\Accounts\AccountTypesDataDb.cs" />
+    <Compile Include="Models\DB\Accounts\CompanyTypeDb.cs" />
+    <Compile Include="Models\DB\Accounts\ContactDetailsDb.cs" />
+    <Compile Include="Models\DB\Accounts\ContactFocusesDb.cs" />
+    <Compile Include="Models\DB\Accounts\ContactJobFunctionDb.cs" />
+    <Compile Include="Models\DB\Accounts\ContactProjectsDb.cs" />
+    <Compile Include="Models\DB\Accounts\ContactsByAccountIdDb.cs" />
+    <Compile Include="Models\DB\Accounts\CurrencyDb.cs" />
+    <Compile Include="Models\DB\Accounts\ContactListContactDb.cs" />
+    <Compile Include="Models\DB\Accounts\CountryDb.cs" />
+    <Compile Include="Models\DB\Accounts\LocationDb.cs" />
+    <Compile Include="Models\DB\Accounts\OwnerDb.cs" />
+    <Compile Include="Models\DB\Accounts\StateDb.cs" />
+    <Compile Include="Models\DB\BOMs\CustomerRFQLineBom.cs" />
+    <Compile Include="Models\DB\BOMs\EMSLineBom.cs" />
+    <Compile Include="Models\DB\BOMs\BOMListDbs.cs" />
+    <Compile Include="Models\DB\BOMs\InventoryDbs.cs" />
+    <Compile Include="Models\DB\BOMs\OutsideOffersDbs.cs" />
+    <Compile Include="Models\DB\BOMs\ProcessMatchDbs.cs" />
+    <Compile Include="Models\DB\BOMs\PurchaseOrderLineBom.cs" />
+    <Compile Include="Models\DB\BOMs\ResultSummaryDbs.cs" />
+    <Compile Include="Models\DB\BOMs\SalesOrderDbs.cs" />
+    <Compile Include="Models\DB\BOMs\VendorQuotesDbs.cs" />
+    <Compile Include="Models\DB\Carrier\AccountCarrierDb.cs" />
+    <Compile Include="Models\DB\Comments\CommentDb.cs" />
+    <Compile Include="Models\DB\CommonData\AccountByObjectTypeDb.cs" />
+    <Compile Include="Models\DB\CommonData\CompanyTypesDb.cs" />
+    <Compile Include="Models\DB\CommonData\ConfigValueDb.cs" />
+    <Compile Include="Models\DB\CommonData\DeliveryRuleDb.cs" />
+    <Compile Include="Models\DB\CommonData\FreightPaymentMethodDb.cs" />
+    <Compile Include="Models\DB\CommonData\GridSettingsDb.cs" />
+    <Compile Include="Models\DB\CommonData\IncotermDb.cs" />
+    <Compile Include="Models\DB\CommonData\OrganizationsDb.cs" />
+    <Compile Include="Models\DB\CommonData\PackagingConditionsDb.cs" />
+    <Compile Include="Models\DB\CommonData\ShippingMethodDb.cs" />
+    <Compile Include="Models\DB\CommonData\StatusDb.cs" />
+    <Compile Include="Models\DB\documents\DocumentDb.cs" />
+    <Compile Include="Models\DB\ErrorManagement\ErrorLogDb.cs" />
+    <Compile Include="Models\DB\ErrorManagement\ErrorLogDetailDb.cs" />
+    <Compile Include="Models\DB\Items\CommodityDB.cs" />
+    <Compile Include="Models\DB\Items\IhsItem.cs" />
+    <Compile Include="Models\DB\Items\ItemInventory.cs" />
+    <Compile Include="Models\DB\Items\ItemDb.cs" />
+    <Compile Include="Models\DB\Items\ItemExtraDb.cs" />
+    <Compile Include="Models\DB\Items\ItemGroupDb.cs" />
+    <Compile Include="Models\DB\Items\ItemIhs.cs" />
+    <Compile Include="Models\DB\Items\ManufacturerDb.cs" />
+    <Compile Include="Models\DB\Items\SetItemDetailsDb.cs" />
+    <Compile Include="Models\DB\Navigation\DbGeneralSecurity.cs" />
+    <Compile Include="Models\DB\Navigation\DbNavigation.cs" />
+    <Compile Include="Models\DB\Navigation\DbUserField.cs" />
+    <Compile Include="Models\DB\OrderFulfillment\ItemInventoryDb.cs" />
+    <Compile Include="Models\DB\OrderFulfillment\OFAvailabilityDb.cs" />
+    <Compile Include="Models\DB\OrderFulfillment\OFListDb.cs" />
+    <Compile Include="Models\DB\OrderFulfillment\SetOrderFulfillmentQtyDb.cs" />
+    <Compile Include="Models\DB\OrderFulfillment\SOAllocationDb.cs" />
+    <Compile Include="Models\DB\PurchaseOrders\CurrencyDb.cs" />
+    <Compile Include="Models\DB\PurchaseOrders\PaymentTermDb.cs" />
+    <Compile Include="Models\DB\PurchaseOrders\PurchaseOrderDb.cs" />
+    <Compile Include="Models\DB\PurchaseOrders\PurchaseOrderExtraDb.cs" />
+    <Compile Include="Models\DB\PurchaseOrders\PurchaseOrderLinesDb.cs" />
+    <Compile Include="Models\DB\QC\AnswerTypeDb.cs" />
+    <Compile Include="Models\DB\QC\ChecklistAssociationsDb.cs" />
+    <Compile Include="Models\DB\QC\ChecklistDb.cs" />
+    <Compile Include="Models\DB\QC\ChecklistDbErrors.cs" />
+    <Compile Include="Models\DB\QC\CheckListLinkTypeDb.cs" />
+    <Compile Include="Models\DB\QC\ConclusionDb.cs" />
+    <Compile Include="Models\DB\QC\InspectionCreateDbErrors.cs" />
+    <Compile Include="Models\DB\QC\InspectionDb.cs" />
+    <Compile Include="Models\DB\QC\InspectionGridItemDb.cs" />
+    <Compile Include="Models\DB\QC\InspectionQuestionDb.cs" />
+    <Compile Include="Models\DB\QC\QuestionDb.cs" />
+    <Compile Include="Models\DB\Quotes\AccountContactDb.cs" />
+    <Compile Include="Models\DB\Quotes\AccountShipAddressDb.cs" />
+    <Compile Include="Models\DB\Quotes\CommodityOptionsDb.cs" />
+    <Compile Include="Models\DB\Quotes\CustomerAccountDb.cs" />
+    <Compile Include="Models\DB\Quotes\NewSalesOrderDb.cs" />
+    <Compile Include="Models\DB\Quotes\PackageConditionsDb.cs" />
+    <Compile Include="Models\DB\Quotes\PackagingOptionsDb.cs" />
+    <Compile Include="Models\DB\Quotes\PartsListDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuoteDetailsDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuoteExtraDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuoteHeaderDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuoteListDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuotePartsDeleteDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuoteStautsDb.cs" />
+    <Compile Include="Models\DB\Quotes\QuoteTypesDb.cs" />
+    <Compile Include="Models\DB\RFQ\RfqDetailsDb.cs" />
+    <Compile Include="Models\DB\RFQ\RfqLineResponseDb.cs" />
+    <Compile Include="Models\DB\RFQ\RfqLinesDb.cs" />
+    <Compile Include="Models\DB\Roles\DbFilterObject.cs" />
+    <Compile Include="Models\DB\Roles\DbNavRole.cs" />
+    <Compile Include="Models\DB\Roles\DbObjectTypeSecurity.cs" />
+    <Compile Include="Models\DB\Roles\DbRole.cs" />
+    <Compile Include="Models\DB\Roles\DbField.cs" />
+    <Compile Include="Models\DB\Roles\DbNavigationLink.cs" />
+    <Compile Include="Models\DB\Roles\DbPermission.cs" />
+    <Compile Include="Models\DB\Roles\DbRoleCreated.cs" />
+    <Compile Include="Models\DB\Roles\DbRoleTypeOption.cs" />
+    <Compile Include="Models\DB\Roles\DbSecurityType.cs" />
+    <Compile Include="Models\DB\SalesOrders\SalesOrderDb.cs" />
+    <Compile Include="Models\DB\SalesOrders\SalesOrderDetailsDb.cs" />
+    <Compile Include="Models\DB\SalesOrders\SalesOrderExtraDb.cs" />
+    <Compile Include="Models\DB\SalesOrders\SalesOrderLinesDb.cs" />
+    <Compile Include="Models\DB\shared\BaseDbResult.cs" />
+    <Compile Include="Models\DB\Shipments\MapSOLineShipmentsDB.cs" />
+    <Compile Include="Models\DB\Shipments\ShipmentDb.cs" />
+    <Compile Include="Models\DB\Sourcing\BuyerNameDb.cs" />
+    <Compile Include="Models\DB\Sourcing\QuoteLineJSON.cs" />
+    <Compile Include="Models\DB\Sourcing\RouteStatusDb.cs" />
+    <Compile Include="Models\DB\Sourcing\SourceCommentUIDDb.cs" />
+    <Compile Include="Models\DB\Sourcing\SourceListDb.cs" />
+    <Compile Include="Models\DB\Sourcing\SourceTypesDb.cs" />
+    <Compile Include="Models\DB\Sourcing\SourcingQuoteListDb.cs" />
+    <Compile Include="Models\DB\Sourcing\SourcingStatusesDb.cs" />
+    <Compile Include="Models\DB\UploadXls\XlsDataMapDb.cs" />
+    <Compile Include="Models\DB\UserModel.cs" />
+    <Compile Include="Models\DB\WorkflowManagement\ActionDb.cs" />
+    <Compile Include="Models\Middleware\Accounts\AccountIncomingSync.cs" />
+    <Compile Include="Models\Middleware\Accounts\AccountSync.cs" />
+    <Compile Include="Models\DB\WorkflowManagement\ConditionsDb.cs" />
+    <Compile Include="Models\DB\WorkflowManagement\RuleActionDb.cs" />
+    <Compile Include="Models\DB\WorkflowManagement\RuleGroupDb.cs" />
+    <Compile Include="Models\DB\WorkflowManagement\StateEngineRuleDb.cs" />
+    <Compile Include="Models\DB\WorkflowManagement\StateEngineTriggerDb.cs" />
+    <Compile Include="Models\Middleware\Enums\MiddlewareActionType.cs" />
+    <Compile Include="Models\Middleware\Enums\MiddlewareObjectTypes.cs" />
+    <Compile Include="Models\Middleware\Items\ItemSync.cs" />
+    <Compile Include="Models\Middleware\MiddlewareSyncResponse.cs" />
+    <Compile Include="Models\Middleware\OrderFulfillment\InventoryAllocateSync.cs" />
+    <Compile Include="Models\Middleware\Owners\SyncOwnership.cs" />
+    <Compile Include="Models\Middleware\Owners\SyncOwner.cs" />
+    <Compile Include="Models\Middleware\PurchaseOrder\PurchaseOrderSync.cs" />
+    <Compile Include="Models\Middleware\QcInspection\QcInspectionSync.cs" />
+    <Compile Include="Models\Middleware\SalesOrder\SalesOrderLineSync.cs" />
+    <Compile Include="Models\Middleware\SalesOrder\SalesOrderSync.cs" />
+    <Compile Include="Models\Middleware\MiddlewareSyncBase.cs" />
+    <Compile Include="Models\Middleware\Enums\MiddlewareSyncStatus.cs" />
+    <Compile Include="Models\Middleware\Enums\MiddlewareSyncDirections.cs" />
+    <Compile Include="Models\Middleware\MiddlewareSyncRequest.cs" />
+    <Compile Include="Models\SAP_API\Requests\AccountCustomerAndContactRequest.cs" />
+    <Compile Include="Models\SAP_API\Requests\CreateAccountSapRequest.cs" />
+    <Compile Include="Models\SAP_API\Responses\ContactCreateResponse.cs" />
+    <Compile Include="Models\SAP_API\Responses\SapAccountCreateResponse.cs" />
+    <Compile Include="Models\SAP_API\Responses\SapApiBaseResonse.cs" />
+    <Compile Include="Models\Services\ErrorManagement\ExceptionDTO.cs" />
+    <Compile Include="Models\Services\ErrorManagement\ExceptionLogSave.cs" />
+    <Compile Include="Models\Services\ErrorManagement\GlobalApiException.cs" />
+    <Compile Include="Models\Shared\AccountStatuses.cs" />
+    <Compile Include="Models\Shared\AccountTypeDetails.cs" />
+    <Compile Include="Models\Shared\ContactMethodEnum.cs" />
+    <Compile Include="Models\Shared\ContactStatusEnum.cs" />
+    <Compile Include="Models\Shared\DocumentPaths.cs" />
+    <Compile Include="Models\Shared\ExternalIdDetails.cs" />
+    <Compile Include="Models\Shared\ItemStatusEnum.cs" />
+    <Compile Include="Models\Shared\LocationTypesEnum.cs" />
+    <Compile Include="Models\Shared\CompanyTypes.cs" />
+    <Compile Include="Models\Shared\AccountTypes.cs" />
+    <Compile Include="Models\Shared\DbErrorCodes.cs" />
+    <Compile Include="Models\Shared\DbStatus.cs" />
+    <Compile Include="Models\Shared\RegionsEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Middleware\shared\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

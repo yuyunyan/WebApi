@@ -1,0 +1,2 @@
+﻿CREATE USER [SOURCEABILITY\Brigitte.Pardo] FOR LOGIN [SOURCEABILITY\Brigitte.Pardo];
+

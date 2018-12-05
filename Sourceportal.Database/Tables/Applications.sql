@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Applications]
+(
+	[AppID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [AppName] VARCHAR(100) NOT NULL
+)

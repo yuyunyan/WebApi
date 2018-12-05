@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="SourcePortalConnection-Web.config Connection String" value="Data Source=data-sql02-us.sourceability.local;Initial Catalog=SourcePortal2_DEV;Persist Security Info=True;User ID=sa_portal;Password=T7iuthou" />
+  <setParameter name="DocumentsFolder" value="Documents" />
+  <setParameter name="Compilation.Debug" value="false" />
+  <setParameter name="MiddlewareApiUrl" value="http://mw.ci.sourceability.com" />
+  <setParameter name="ElasticSearchUrl" value="http://stg-es.sourcengine.com:9200" />
+  <setParameter name="ElasticSearchUser" value="erp01" />
+  <setParameter name="ElasticSearchPassowrd" value="H+#B*t_+2T^5Q6UmwL6A" />
+  <setParameter name="SapErrorsRecipientEmail" value="noreply-sap-error@sourceability.com" />
+  <setParameter name="Env" value="CI" />
+</parameters>

@@ -1,0 +1,30 @@
+﻿CREATE TABLE [dbo].[PurchaseOrderLines] (
+    [POLineID]            INT            IDENTITY (1, 1) NOT NULL,
+    [PurchaseOrderID]     INT            NOT NULL,
+    [POVersionID]         INT            NOT NULL,
+    [StatusID]            INT            NOT NULL,
+    [ItemID]              INT            NOT NULL,
+    [LineNum]             INT            NOT NULL,
+    [LineRev]             INT            CONSTRAINT [DF_PurchaseOrderLines_LineRev] DEFAULT ((0)) NOT NULL,
+    [VendorLine]          INT            NULL,
+    [Qty]                 INT            NOT NULL,
+    [Cost]                MONEY          NOT NULL,
+    [DateCode]            NVARCHAR (25)  NULL,
+    [PackagingID]         INT            NULL,
+    [PackageConditionID]  INT            NULL,
+	[ToWarehouseID]		  INT            NOT NULL,
+    [DueDate]             DATE           NULL,
+    [Created]             DATETIME       CONSTRAINT [DF__PurchaseO__Creat__36670980] DEFAULT (getutcdate()) NOT NULL,
+    [CreatedBy]           INT            NOT NULL,
+    [Modified]            DATETIME       NULL,
+    [ModifiedBy]          INT            NULL,
+    [IsDeleted]           BIT            CONSTRAINT [DF__PurchaseO__IsDel__375B2DB9] DEFAULT ((0)) NOT NULL,
+    [IsSpecBuy]           BIT            NULL,
+    [SpecBuyForUserID]    INT            NULL,
+    [SpecBuyForAccountID] INT            NULL,
+    [SpecBuyReason]       NVARCHAR (200) NULL,
+    [ClonedFromID]        INT            NULL,
+    CONSTRAINT [PK__Purchase__07B9D342B827585E] PRIMARY KEY CLUSTERED ([POLineID] ASC)
+);
+
+

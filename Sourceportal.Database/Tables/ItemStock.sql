@@ -1,0 +1,23 @@
+﻿CREATE TABLE [dbo].[ItemStock] (
+    [StockID]          INT           IDENTITY (1, 1) NOT NULL,
+    [POLineID]             INT           NOT NULL,
+    [ItemID]               INT           NOT NULL,
+    [IsRejected]		   BIT			 DEFAULT 0 NOT NULL,
+	[InvStatusID]          INT           NOT NULL,
+    [ReceivedDate]         DATETIME      DEFAULT getutcdate() NOT NULL,
+    [DateCode]             VARCHAR (50)  NULL,
+    [PackagingID]          INT           NULL,
+    [PackageConditionID]   INT           NULL,
+    [COO]                  INT			 NULL,
+    [Expiry]               DATE          NULL,
+    [StockDescription]     NVARCHAR (40) NULL,
+	[MfrLotNum]			   VARCHAR (50)  NULL,
+    [ExternalID]           VARCHAR (50)  NULL,
+    [Created]              DATETIME      DEFAULT getutcdate() NOT NULL,
+    [CreatedBy]            INT           NOT NULL,
+    [Modified]             DATETIME      NULL,
+    [ModifiedBy]           INT           NULL,
+    [IsDeleted]            BIT           DEFAULT 0 NOT NULL,
+    [ClonedFromID] INT NULL, 
+    PRIMARY KEY CLUSTERED ([StockID] ASC)
+);

@@ -1,0 +1,6 @@
+﻿CREATE FUNCTION [dbo].[fnAccountObjectTypeID]()
+RETURNS INT
+AS
+BEGIN
+    RETURN 1
+END

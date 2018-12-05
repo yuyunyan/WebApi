@@ -1,0 +1,30 @@
+﻿using System.Collections.Generic;
+using Sourceportal.Domain.Models.DB.Items;
+using Sourceportal.Domain.Models.API.Requests.Items;
+using Sourceportal.Domain.Models.API.Requests;
+using Sourceportal.Domain.Models.API.Requests.SalesOrders;
+using Sourceportal.Domain.Models.API.Responses.Items;
+
+namespace Sourceportal.DB.Items
+{
+    public interface IItemRepository
+    {
+        IList<CommodityDb> GetItemCommodityList();
+        IList<ItemGroupDb> GetItemGroupList();
+        IList<ManufacturerDb> GetManufacturerList(string searchString);
+        IList<ItemExtraDb> GetItemExtraList();
+        ItemDb GetItemDetails(int ItemID);
+        IList<ItemDb> GetItemList(SearchFilter searchfilter);
+        IList<ItemStatus> GetItemStatuses();
+        SetItemDetailsDb SetItemDetails(SetItemDetailsRequest itemdetails);
+        IList<ItemDb> GetItems();
+        ItemDb CreateIhsItemInDb(int itemId);
+        void ItemSapDataSet(SetExternalIdRequest request);
+        ItemInventory GetItemInventoryByExternalId(string requestInventoryExternalId);
+<<<<<<< HEAD
+        int CreateManufacturer(SetManufacturerRequest model);
+=======
+        int GetItemByExternalId(string externalId);
+>>>>>>> ci
+    }
+}

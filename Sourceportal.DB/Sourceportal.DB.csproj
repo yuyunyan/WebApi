@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42D6F60A-46E9-460A-8CD9-904A2B57D633}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sourceportal.DB</RootNamespace>
+    <AssemblyName>Sourceportal.DB</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=6.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.6.2.0\lib\net46\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest, Version=6.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.6.0.0\lib\net46\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\AccountRepository.cs" />
+    <Compile Include="BOMs\BOMsRepository.cs" />
+    <Compile Include="BOMs\IBOMsRepository.cs" />
+    <Compile Include="Carrier\CarrierRepository.cs" />
+    <Compile Include="Carrier\ICarrierRepository.cs" />
+    <Compile Include="Documents\DocumentsRepository.cs" />
+    <Compile Include="Documents\IDocumentsRepository.cs" />
+    <Compile Include="Comments\CommentRepository.cs" />
+    <Compile Include="Comments\ICommentRepository.cs" />
+    <Compile Include="CommonData\CommonDataRepository.cs" />
+    <Compile Include="CommonData\ICommonDataRepository.cs" />
+    <Compile Include="Enum\ApplicationType.cs" />
+    <Compile Include="Enum\CommentType.cs" />
+    <Compile Include="Enum\DocumentType.cs" />
+    <Compile Include="Enum\LocationType.cs" />
+    <Compile Include="Enum\PermissionType.cs" />
+    <Compile Include="Enum\ObjectType.cs" />
+    <Compile Include="Accounts\IAccountRepository.cs" />
+    <Compile Include="Enum\XlsDataMap.cs" />
+    <Compile Include="MailManagement\MailManagementRepository.cs" />
+    <Compile Include="ErrorManagement\ErrorManagementRepository.cs" />
+    <Compile Include="ErrorManagement\IErrorManagementRepository.cs" />
+    <Compile Include="Items\IItemRepository.cs" />
+    <Compile Include="Items\IItemsIhsRepository.cs" />
+    <Compile Include="Items\ItemRepository.cs" />
+    <Compile Include="Items\ItemsIhsRepository.cs" />
+    <Compile Include="Navigation\INavigationRepository.cs" />
+    <Compile Include="Navigation\NavigationRepository.cs" />
+    <Compile Include="OrderFillment\IOrderFillmentRepository.cs" />
+    <Compile Include="OrderFillment\OrderFillmentRepository.cs" />
+    <Compile Include="Ownership\IOwnershipRepository.cs" />
+    <Compile Include="Ownership\OwnershipRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrders\IPurchaseOrderRepository.cs" />
+    <Compile Include="PurchaseOrders\PurchaseOrderRepository.cs" />
+    <Compile Include="QC\ChecklistRepository.cs" />
+    <Compile Include="QC\DbCommonFunctions.cs" />
+    <Compile Include="QC\IChecklistRepository.cs" />
+    <Compile Include="QC\IInspectionRepository.cs" />
+    <Compile Include="QC\InspectionRepository.cs" />
+    <Compile Include="Quotes\IQuoteRepository.cs" />
+    <Compile Include="Quotes\QuoteRepository.cs" />
+    <Compile Include="Roles\IRoleRepository.cs" />
+    <Compile Include="Roles\RoleRepository.cs" />
+    <Compile Include="SalesOrders\ISalesOrderRepository.cs" />
+    <Compile Include="SalesOrders\SalesOrderRepository.cs" />
+    <Compile Include="Shipments\IShipmentRepository.cs" />
+    <Compile Include="Shipments\ShipmentRepository.cs" />
+    <Compile Include="Sourcing\ISourcingRepository.cs" />
+    <Compile Include="Sourcing\SourcingRepository.cs" />
+    <Compile Include="UploadXls\IUploadXlsRepository.cs" />
+    <Compile Include="UploadXls\UploadXlsRepository.cs" />
+    <Compile Include="User\IUserRepository.cs" />
+    <Compile Include="User\UserRepository.cs" />
+    <Compile Include="VendorRFQs\IVendorRFQRepository.cs" />
+    <Compile Include="VendorRFQs\VendorRFQRepository.cs" />
+    <Compile Include="WorkflowManagement\IWorkflowManagementRepository.cs" />
+    <Compile Include="WorkflowManagement\WorkflowManagementRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sourceportal.Domain\Sourceportal.Domain.csproj">
+      <Project>{030c5df9-5ac7-4b21-9bb2-005d36f3d67d}</Project>
+      <Name>Sourceportal.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sourceportal.Utilities\Sourceportal.Utilities.csproj">
+      <Project>{8E6B7429-AD7C-4792-855A-45D829504882}</Project>
+      <Name>Sourceportal.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
