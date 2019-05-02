@@ -11,7 +11,7 @@ CREATE VIEW [dbo].[vwPurchaseOrders] AS
 	WITH po AS
 		(
 			SELECT *,
-				ROW_NUMBER() OVER (PARTITION BY PurchaseOrderID ORDER BY VersionID DESC) AS vn
+				ROW_NUMBER() OVER (PARTITION BY PurchaseOrderID ORDER BY VersionID DESC) AS vnb
 			FROM PurchaseOrders
 			WHERE IsDeleted = 0			  
 		)
