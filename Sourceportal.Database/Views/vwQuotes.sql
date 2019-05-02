@@ -5,7 +5,7 @@ CREATE VIEW [dbo].[vwQuotes] AS
 	WITH q AS
 		(
 			SELECT *,
-				ROW_NUMBER() OVER (PARTITION BY QuoteID ORDER BY VersionID DESC) AS vn
+				ROW_NUMBER() OVER (PARTITION BY QuoteID ORDER BY VersionID DESC) AS vnm
 			FROM Quotes
 			WHERE IsDeleted = 0			  
 		)
